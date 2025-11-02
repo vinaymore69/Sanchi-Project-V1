@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./css_files/login.css">
+    <link rel="stylesheet" href="./css_files/footer.css">
     <title>Document</title>
 </head>
 <body>
-
     <div class="container">
         <div class="form-container">
-            <form action="/login" method="post">
             <label class="form-row">
-              
-                <input autocomplete="one-time-code" type="email" id="email" name="email" placeholder="Enter your E-mail" required >
+                <input autocomplete="one-time-code" type="text" id="name" name="name" placeholder="name" required>
             </label>
             <label class="form-row">
-                <input autocomplete="one-time-code" type="text" id="name" name="password" placeholder="Enter your Password" required>
+                <input autocomplete="one-time-code" type="email" id="email" name="email" placeholder="e-mail" required >
             </label>
             <label class="form-row">
-                <input type="checkbox" id="subscribe" name="subscribe"> I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
+                <input type="checkbox" id="subscribe" name="subscribe"> agree to whatever
             </label>
             <div class="form-row">
                 <input type="submit" value="submit">
             </div>
-        </form>
         </div>
     
         <svg viewBox="0 0 1000 1000" stroke-linecap="round" stroke-linejoin="round">
@@ -184,7 +181,10 @@
     
         </svg>
     </div>
+
+
+    
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="login.js"></script>
+    <script src="javascript_files/login.js"></script>
 </body>
 </html>

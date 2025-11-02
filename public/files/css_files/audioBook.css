@@ -115,10 +115,6 @@ html, body {
     margin-bottom: 1vh;
 }
 
-.audio-card h5::before{
-    content: "Author: ";
-    font-weight: 700;
-}
 
 .audio-card p{
     font-size: 1vw;

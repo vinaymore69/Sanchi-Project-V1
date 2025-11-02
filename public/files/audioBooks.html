@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Books</title>
+  <link rel="stylesheet" href="css_files/menu.css">
+  <link rel="stylesheet" href="css_files/audioBooks.css">
+  <link rel="stylesheet" href="css_files/language.css">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div id="main">
+
+    <div id="languages-section">
+      <div id="closing" style="opacity: 0">
+        <span style="font-size: 100px" id="closing-span">&#10008;</span>
+      </div>
+      <div id="languages">
+        <h1>Choose Language</h1>
+        <div id="language">
+          <h2 value="english" id="english-option">English</h2>
+          <h2 value="hindi" id="hindi-option">हिंदी</h2>
+          <h2 value="marathi" id="marathi-option">मराठी</h2>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    
+    <div id="nav-resources-sub-options">
+       
+      <div id="nav-resources-heading">
+          <h3>Resources</h3>
+      </div>
+
+      <div id="nav-resources-links">
+        <h4><a href="#"><span class="material-symbols-outlined">library_books</span> <span>Audio Books</span></a></h4>
+        <h4><a href="#"><span class="material-symbols-outlined">video_library</span> <span>Video</span></a></h4>
+        <h4><a href="#"><span class="material-symbols-outlined">download</span> <span>Notes Download</span></a></h4>
+      </div>
+     
+      <div id="nav-resources-closing">
+        <h4><a href="#"><span class="material-symbols-outlined">close</span> <span>Close</span></a></h4>
+      </div>
+    </div>
+
+
+    <div id="error-notification">
+      <div class="error-content">
+          <span class="error-title" id="error-title"></span>
+          <span class="error-description" id="error-description"></span>
+          <span class="close-icon" onclick="closeError()">×</span>
+      </div>
+  </div>
+  
+
+
+    <div id="page1">
+
+      <nav>
+        <a href="index.html">
+          <img src="images/logo.svg" alt="" id="nav-img" />
+        </a>
+        <div id="nav-part2">
+          <h4>
+            <a href="index.html">
+              <span class="material-symbols-outlined">home</span>
+              <span style="font-size: 1.2vw" id="content10">Home</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="about.html">
+              <span class="material-symbols-outlined">info</span>
+              <span style="font-size: 1.2vw" id="content11">About</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="#" id="language-toggle">
+              <span class="material-symbols-outlined">language</span>
+              <span style="font-size: 1.2vw" id="content12">Language</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="contact.html">
+              <span class="material-symbols-outlined">contact_page</span>
+              <span style="font-size: 1.2vw" id="content13">Contact</span>
+            </a>
+          </h4>
+          <h4 class="nav-resources-section">
+            <a href="#">
+              <span class="material-symbols-outlined">video_library</span>
+              <span style="font-size: 1.2vw" id="content14">Resources</span>
+
+            </a>
+
+          </h4>
+
+        </div>
+        <div id="menu-icon">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </div>
+
+      </nav>
+
+      <h4 class="nav-dashboard-section" id="dashboard-section">
+        <a href="dashboard.html">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span style="font-size: 1.2vw">Dashboard</span>
+        </a>
+      </h4>
+      <h4 class="nav-dashboard-section" id="login-section">
+        <a href="login1.html">
+          <span class="material-symbols-outlined">login</span>
+          <span style="font-size: 1.2vw">Login</span>
+        </a>
+      </h4>
+
+      <div id="nav-part3">
+        <div id="mobile-nav">
+          <h5><a href="index.html">Home</a></h5>
+          <h5><a href="about.html">About</a></h5>
+          <h5><a id="language-toggle1"><span id="content12">Languages</span></a></h5>
+          <h5><a href="contact.html">Contact</a></h5>
+          <h5><a href="register.html">Resources</a></h5>
+        </div>
+      </div>
+
+      <h1 class="audio-books-main-heading"><u>Lear</u>n <u>Wit</u>h <br><u>Audi</u>o <u>Book</u>s: </h1>
+
+      <div id="audio-books-section-pages">
+
+
+        <div class="audio-book">
+          <div class="audio-book-description-left">
+            <img src="images/14.jpeg" alt="">
+          </div>
+          <div class="audio-book-description-right">
+            <h2>Story Book 1</h2>
+            <h3>-by two good</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti cupiditate suscipit sequi minus vero
+              quaerat unde cumque sint temporibus. Dolores autem fugiat et ad quae cum at, numquam sapiente iusto.</p>
+            <button onclick="showError('Error Name', 'This is the error description.');">
+              <span>Listen</span>
+              <span class="material-symbols-outlined">hearing</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div id="page5"></div>
+
+
+  </div>
+
+
+
+  <div id="footer">
+    <div id="footer-div">
+      <h4 id="content29">
+        SanChi <br />
+        Education <br />
+        for Girls
+      </h4>
+    </div>
+    <h1 id="content0">SanChi</h1>
+    <div id="footer-bottom">
+      <h4>Copyright: @SanChi Team</h4>
+      <h4>Girs Education Commitee</h4>
+      <h4>Vidyalankar Polytechnic</h4>
+      <h4>RedBox Agency</h4>
+    </div>
+  </div>
+
+  <script src="javascript_files/resource.js"></script>
+  <script src="javascript_files/menu.js"></script>
+  <script src="javascript_files/audioBooks.js"></script>
+  <script src="javascript_files/loginStatus.js"></script>
+</body>
+
+</html>

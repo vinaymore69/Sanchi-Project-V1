@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    
+}
+
+#main {
+    position: relative;
+    z-index: 10;
+
+}
+
+#page1 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 2vw;
+    background-color: #ffffff;
+    margin-bottom: -1px;
+}
+
+.heading{
+    font-family: 'poppins';
+    margin-bottom: 1vw;
+    font-size: 3.9vw;
+}
+
+
+/* From Uiverse.io by Yaya12085 */ 
+.radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 60vw;
+    font-size: 14px;
+    gap:0.5vw;
+  }
+
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: rgba(51, 65, 85, 1);
+    transition: all 0.5s ease-in-out;
+    font-family: 'poppins';
+ 
+  }
+  .radio:hover {
+    background-color: rgb(251, 251, 251);
+    transition: all 0.5s ease-in-out;
+    border-radius: 8px;
+  
+  }
+  .radio-inputs .radio input:checked + .name {
+    background-color: #ffffff;
+    font-weight: 600;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }

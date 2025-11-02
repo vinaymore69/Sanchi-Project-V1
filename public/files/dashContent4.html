@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Upload Panel</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    #video-panel-header {
+      text-align: center;
+      margin-bottom: 2vw;
+      font-size: 2vw;
+      font-weight: 600;
+      color: #333;
+    }
+
+
+    #video-panel-form-group {
+      margin-bottom: 2vw;
+    }
+
+    #video-panel-label {
+      display: block;
+      margin-bottom: 0.5vw;
+      font-size: 1.2vw;
+      font-weight: 500;
+      color: #555;
+    }
+
+    #video-panel-input, 
+    #video-panel-textarea, 
+    #video-panel-file {
+      width: 100%;
+      padding: 0.8vw;
+      font-size: 1vw;
+      border: 1px solid #ccc;
+      border-radius: 0.3vw;
+      box-sizing: border-box;
+    }
+
+    #video-panel-textarea {
+      height: 7vw;
+      resize: none;
+    }
+
+    #video-panel-button {
+      display: block;
+      width: 100%;
+      padding: 1vw;
+      background: #76c7c0;
+      color: #fff;
+      font-size: 1.2vw;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.3vw;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #video-panel-button:hover {
+      background: #68b2a5;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="video-panel-header">Upload Your Video</h1>
+  <form id="video-panel-form">
+    <div id="video-panel-form-group">
+      <label id="video-panel-label" for="video-title">Video Title</label>
+      <input id="video-panel-input" type="text" name="videoTitle" placeholder="Enter the video title">
+    </div>
+    <div id="video-panel-form-group">
+      <label id="video-panel-label" for="video-description">Video Description</label>
+      <textarea id="video-panel-textarea" name="videoDescription" placeholder="Enter the video description"></textarea>
+    </div>
+    <div id="video-panel-form-group">
+      <label id="video-panel-label" for="video-file">Upload Video</label>
+      <input id="video-panel-file" type="file" name="videoFile" accept="video/*">
+    </div>
+    <div id="video-panel-form-group">
+      <label id="video-panel-label" for="video-thumbnail">Upload Thumbnail</label>
+      <input id="video-panel-file" type="file" name="videoThumbnail" accept="image/*">
+    </div>
+    <button id="video-panel-button" type="submit">Upload Video</button>
+  </form>
+</body>
+</html>

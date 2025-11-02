@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Special+Elite&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+#main{
+    /* color: black; */
+  /* background-color: #ffffff; */
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 2vw 2vw 2vw;
+    background-color: #ffffff;
+}
+ .dashboard-panel{
+    display: flex;
+    flex-direction: row;
+    gap:3vw;
+  
+ }
+ #side-bar {
+    max-height: 42vw;
+    width: 20vw;
+    padding: 1vw;
+    position: relative;
+    background-color: #f4f4f4;
+    /* border-radius: 0.5vw; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, 
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: all 0.3s ease-in-out;
+}
+
+#side-bar #profile-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto; /* Auto height to fit content */
+    text-align: center;
+    gap: 0.5vw;
+    padding: 1vw 0;
+    border-bottom: 0.1vw solid #ccc; /* Add separator between sections */
+}
+
+#side-bar #profile-data #profile-image {
+    display: flex;
+    align-self: center;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 0.3vw solid white;
+}
+
+#side-bar #profile-data #name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+}
+
+#side-bar #profile-data #email {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+#side-bar #dashboard-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 1vw; /* Add spacing from profile data */
+}
+
+#side-bar #dashboard-options .dashboard-options-element {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 0.8vw;
+    font-size: 0.9vw;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#side-bar #dashboard-options .dashboard-options-element:hover {
+    background-color: #d3d3d3;
+}
+
+#side-bar #dashboard-options .material-symbols-outlined {
+    font-size: 1.2vw;
+}
+
+#side-bar #additional-options {
+    margin-top: auto; /* Push to the bottom of the sidebar */
+    padding: 1vw 0;
+    text-align: center;
+}
+
+#side-bar #additional-options #logout {
+    width: 100%;
+    padding: 0.8vw;
+    font-size: 0.9vw;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#side-bar #additional-options #logout:hover {
+    background-color: #d3d3d3;
+}
+
+
+#dashboard-content{
+    width: 80vw;
+    max-height: 80vh;
+    border: 1px solid thin #000;
+    padding: 2vw 2vw;
+    position: relative;
+    background-color: #f4f4f4;
+    /* border-radius: 0.3vw; */
+    gap: 2vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: all 0.3s ease-in-out;
+    overflow-y:scroll;
+}
+
+#dashboard-content::-webkit-scrollbar{
+    /* display: none; */
+}
+
+
+
+#dashboard-content>#dashboard-content-button1{
+    display: none;
+    padding-top: 1vw ;
+    padding-bottom: 1vw;
+    height: auto;
+}
+#dashboard-content>#dashboard-content-button2,
+#dashboard-content>#dashboard-content-button3,
+#dashboard-content>#dashboard-content-button4,
+#dashboard-content>#dashboard-content-button5
+{
+    display: none;
+}
+
+
+
+
+
+
+
+/* Footer css */
+
+
+#page5{
+    height: 115vh;
+    width: 100%;
+
+}
+
+
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 105vh;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #000000;
+    padding: 1vw 2vw;
+}
+
+#footer h1{
+    margin-top: -5vw;
+    font-size: 24vw;
+}
+
+#footer-div{
+    height: 12vh;
+    width: 100%;
+    /* background-color: #79fd0e; */
+    border-radius: 8px;
+    /* border: 1px solid #ffffff5f ; */
+    border-width: thin;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+#footer-div h4{
+    font-size: 2vw;
+    line-height: 2vw;
+
+}
+
+#footer-bottom{
+    height: 10vh;
+    width: 100%;
+    border-top: 2px solid #5e5d5d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+#footer-bottom h4{
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+/* footer css end */

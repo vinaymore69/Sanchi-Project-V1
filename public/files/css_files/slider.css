@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+.swiper {
+    width: 100vw;
+    height: 90vh;
+    margin: 2vh auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 2vh;
+    background: #dd9494;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pagination */
+.swiper-pagination {
+    height: 2vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 10vw;
+    color: #dd9494;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #95f771 !important;
+}
+
+/* Navigation Buttons */
+.navigate {
+    color: white !important;
+    background-color: #95f7717b;
+    padding: 1.5vw;
+    border-radius: 25px;
+    margin: 2vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .swiper {
+        height: 60vh;
+    }
+    
+    .navigate {
+        padding: 1.2vw;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .swiper {
+        height: 50vh;
+        width: 180vw;
+    }
+
+    .swiper-slide {
+        font-size: 1.5vh;
+    }
+
+    .navigate {
+        padding: 3vw;
+        font-size: 1.2vh;
+    }
+}

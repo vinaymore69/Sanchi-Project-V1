@@ -2,97 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css_files/login1.css">
+  <link rel="stylesheet" href="/css_files/menu.css">
+  <link rel="stylesheet" href="/css_files/language.css">
+  <link rel="stylesheet" href="/css_files/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        form label {
-            display: block;
-            margin: 10px 0 5px;
-            font-size: 14px;
-            color: #333;
-        }
-
-        form input[type="text"],
-        form input[type="password"] {
-            width: 280px;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        form input[type="text"]:focus,
-        form input[type="password"]:focus {
-            border-color: #007bff;
-            outline: none;
-            box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
-        }
-
-        form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        p {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-    </style>
 </head>
 
 <body>
-    <form id="form-login" action="/auth/login" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter Your Username">
+    <!-- languages section -->
+    <div id="languages-section">
+      <div id="closing" style="opacity: 0">
+        <span style="font-size: 100px" id="closing-span">&#10008;</span>
+      </div>
+      <div id="languages">
+        <h1 id="content101">Choose Language</h1>
+        <div id="language">
+          <h2 value="english" id="english-option">English</h2>
+          <h2 value="hindi" id="hindi-option">हिंदी</h2>
+          <h2 value="marathi" id="marathi-option">मराठी</h2>
+        </div>
+      </div>
+    </div>
+    <!-- languages section end -->
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter Your Password">
+    <!-- resources absolute page -->
+    <div id="nav-resources-sub-options">
+      <div id="nav-resources-div">
+        <h3 id="content102">Resources</h3>
+      </div>
 
-        <input type="submit" value="Login">
-        <p><a href="/resetPassword.html" id="resetPasswordLink">Reset Password</a></p>
-        <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
-    </form>
+      <div id="nav-resources-links">
+        <h4>
+          <a href="/resource/audio"><span class="material-symbols-outlined">library_books</span>
+            <span id="content103">Audio Books</span></a>
+        </h4>
+        <h4>
+          <a href="/resource/video"><span class="material-symbols-outlined">video_library</span>
+            <span id="content104">Video</span></a>
+        </h4>
+        <h4>
+          <a href="/resource/notes"><span class="material-symbols-outlined">download</span>
+            <span id="content105">Notes Download</span></a>
+        </h4>
+      </div>
+
+      <div id="nav-resources-closing">
+        <h4>
+          <a href="#"><span class="material-symbols-outlined">close</span>
+            <span id="content106">Close</span></a>
+        </h4>
+      </div>
+    </div>
+    <!-- resources absolute page end-->
+  <div id="main">
+
+
+
+    <div id="page1">
+      <nav>
+        <a href="/index.html">
+          <img src="/images/vp logo.png" alt="" id="nav-img" />
+        </a>
+        <div id="nav-part2">
+          <h4>
+            <a href="/index.html">
+              <span class="material-symbols-outlined">home</span>
+              <span style="font-size: 1.2vw" id="content114">Home</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="/about.html">
+              <span class="material-symbols-outlined">info</span>
+              <span style="font-size: 1.2vw" id="content115">About</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="#" id="language-toggle">
+              <span class="material-symbols-outlined">language</span>
+              <span style="font-size: 1.2vw" id="content109">Language</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="/contact.html">
+              <span class="material-symbols-outlined">contact_page</span>
+              <span style="font-size: 1.2vw" id="content117">Contact</span>
+            </a>
+          </h4>
+          <h4 class="nav-resources-section">
+            <a href="#">
+              <span class="material-symbols-outlined">video_library</span>
+              <span style="font-size: 1.2vw" id="content111">Resources</span>
+            </a>
+          </h4>
+          <h4 class="nav-dashboard-section" id="dashboard-section">
+            <a href="/user/dashboard">
+              <span class="material-symbols-outlined">dashboard</span>
+              <span id="content112">Dashboard</span>
+            </a>
+          </h4>
+        </div>
+        <div id="menu-icon">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+      </nav>
+
+      <div id="nav-part3">
+        <div id="mobile-nav">
+          <h5><a href="/index.html" id="content107">Home</a></h5>
+          <h5><a href="/about.html" id="content108">About</a></h5>
+          <h5>
+            <a id="language-toggle1"><span id="content116">Languages</span></a>
+          </h5>
+          <h5><a href="/contact.html" id="content110">Contact</a></h5>
+          <h5><a href="#" id="content118">Resources</a></h5>
+        </div>
+      </div>
+
+
+
+      <div id="login-container">
+        <div id="login-left-container"></div>
+
+
+        <div id="login-right-container">
+          <h3 id="content1" class="loginHeading">LOGIN</h3>
+          <a href="/register.html" id="content3" class="content3">Register ?</a>
+          <form action="/auth/login" method="post" onsubmit="">
+
+
+            <div class="form-group1">
+              <label for="username" id="content0">Username: </label>
+              <input type="text" id="username" name="username" placeholder="Username" required>
+            </div><br>
+
+
+            <div class="form-group2">
+              <label for="password" id="content2">Password: </label>
+              <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <a href="/resetPassword.html" id="content5" class="content5">Forgot Password?</a>
+            <br>
+            <button id="content4" class="content4">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="page6">
+      <div id="footer-top">
+        <div id="footer-socials">
+          <div id="footer-media">
+           <a href="https://www.instagram.com/vp_vidyalankar/" style="text-decoration: none; color: #fff;"> <i class="fa-brands fa-instagram fa-2x" ></i></a>
+           <a href="https://www.linkedin.com/in/vidyalankarpolytechnic/" style="text-decoration: none; color: #fff;"><i class="fa-brands fa-linkedin"></i></a> 
+           <a href="https://x.com/VidyalankarPoly" style="text-decoration: none; color: #fff;"><i class="fa-brands fa-x-twitter"></i></a> 
+          </div>
+
+          <div id="footer-copyrights">
+            <h4 id="content201">© 2025 Vidyalankar Polytechnic. All Rights Reserved.</h4>
+          </div>
+
+          <div id="footer-links">
+            <a href="privacypolicy.html" id="content202">Privacy Policy</a>
+            <a href="gallery.html" id="content203">Gallery</a>
+          </div>
+        </div>
+        <div id="footer-description">
+          <p id="content204">
+            "Volunteering is at the very core of being a human. No one has made it through life without someone else's help." — Heather French Henry
+          </p>
+        </div>
+      </div>
+
+      <div id="footer-down">
+
+        <div class="group1">
+          <img src="All domains Images/All Logos/5.png" alt="" class="footer-down-image" />
+        <img src="All domains Images/All Logos/4.png" alt="" class="footer-down-image"/>
+        <h6 id="content205">Inovators</h6>
+        </div>
+        <!-- <img src="All domains Images/All Logos/1.png" alt="" /> -->
+
+        <div class="group2">
+          <h6 id="content206">Sponcers</h6>
+          <img src="images/redbox logo.png" alt="" class="footer-down-image"  />
+          <img src="images/dads in town logo.png" alt="" class="footer-down-image"  />
+      </div>
+    </div>
+
+    <!-- footer section end -->
+
+    <!-- Page 5 transparent for footer -->
+
+    <!-- <div id="page5"></div> -->
+    <!-- Page 5 transparent for footer -->
+  </div>
+
+  </div>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/01/15/19/20250115191515-LBSDTJT5.js"></script>
+  <script src="/javascript_files/login1.js"></script>
+  <script src="/javascript_files/menu.js"></script>
+  <script src="/javascript_files/lenis.js"></script>
+  <script src="/javascript_files/loginStatus.js"></script>
+  <script src="/javascript_files/resource.js"></script>
+
 </body>
 
 </html>

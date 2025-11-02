@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="css_files/dashContent3.css" />
+</head>
+
+<body>
+    <div id="notesApp" class="notesApp">
+        <div class="sidebar">
+            <button id="addButton" class="addButton">
+                <span>+</span>
+            </button>
+            <div id="colorPicker" class="colorPicker" style="display: none">
+                <div class="colorBlock" style="background-color: #fec9a7"></div>
+                <div class="colorBlock" style="background-color: #a7fec9"></div>
+                <div class="colorBlock" style="background-color: #c9a7fe"></div>
+                <div class="colorBlock" style="background-color: #a7c9fe"></div>
+            </div>
+        </div>
+        <div id="noteArea" class="noteArea"></div>
+
+        <div id="noteEditor" class="noteEditor" style="display: none;">
+            <textarea id="noteTextarea" placeholder="Enter your data..."></textarea>
+            <button id="updateButton">Update</button>
+            <button id="deleteButton" class="destructive">Delete</button>
+            <span id="closeEditor" class="closeIcon">&#x2718;</span>
+        </div>
+    </div>
+
+    <script src="javascript_files/dashContent3.js"></script>
+</body>
+
+</html>

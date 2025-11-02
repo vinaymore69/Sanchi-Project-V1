@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#main {
+    position: relative;
+    z-index: 10;
+}
+
+#page1>h1 {
+    font-weight: 600;
+    font-size: 8vw;    
+    width: 60%;
+    line-height: 9vw;
+    margin-top: 1vw;
+    text-transform: uppercase;
+}
+
+#page1 {
+    position: relative;
+    min-height: 17vh;
+    position: relative;
+    width: 100%;
+    padding: 0vw 2vw 2vw 2vw;
+    background-color: #ffffff;
+    
+    /* margin-bottom: -1px;*/
+}
+
+#form-container {
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    padding: 2vw;
+    /* margin-bottom: 10vw; */
+}
+
+#contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* max-width: 1200px; */
+    border-radius: 8px;
+    gap: 3vw;
+    justify-content: space-between;
+}
+
+
+
+#group-left{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    padding: 0.5vw;
+    justify-content: flex-start;
+}
+#group-right {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    /* padding: 2vw; */
+    justify-content: flex-start;
+    /* background-color: aquamarine; */
+}
+#group-left .form-group,
+#group-right .form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Separator line */
+}
+
+
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+label {
+    position: absolute;
+    top: 0vw;
+    left: 1vw;
+    font-size: 3vw;
+    color: #C0C0C0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 99;
+    width: 100%;
+}
+textarea{
+    resize: none;
+    /* text-transform: capitalize; */
+    width: 100%;
+    height: 10vh;
+    padding: 10px;
+    font-size: 1.2vw;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: -1vw;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    height: 5vw;
+    border: none;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 2vw;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: -1vw;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    height: 5vw;
+    border: none;
+    font-weight: 700;
+    /* background-color: #202120; */
+    text-transform: uppercase;
+}
+
+label:hover{
+    color: #000;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+select:focus {
+    outline: none;
+    background: transparent; /* Background color on focus */
+    color: #000000; /* Text color on focus */
+}   
+select:focus + label::after {
+    color: #fff; /* Change arrow color on focus */
+}
+    
+input:focus + label,
+textarea:focus + label,
+select:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label,
+select:not([value=""]):valid + label {
+    top: -5px;
+    left: 5px;
+    font-size: 0.75rem;
+    color: #000;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #000;
+}
+
+
+
+
+
+
+
+/* Change the label color when hovering over input or select */
+input:hover + label,
+select:hover + label {
+    color: #000;
+    cursor: pointer;
+}
+
+
+.add-attachment-btn{
+    background-color: #000000;
+    color: #ccc;
+    padding: 0.5vw 1vw;
+    width: 15vw;
+    border-radius: 5vw;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border: solid    #F2F2F2;
+    font-size: 1vw;
+    margin-top: 2vw;
+    border: solid thin  black;
+}
+
+.add-attachment-btn:hover{
+    background-color: #F2F2F2;
+    color: #000;
+  
+
+}
+
+form > .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 2vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    width: auto; /* Ensures the button width is only as wide as its content */
+    margin: 0; /* Aligns the button to the left */
+}
+
+form > .submit-btn > i {
+    background-image: url(https://www.bottega53.com/svg/arrow-right.svg);
+    width: 3vw;
+    height: 3vw;
+    background-size: cover;
+    margin-left: 0.2em;
+    transition: transform 0.5s ease-in-out;
+}
+
+form > .submit-btn:hover > i {
+    transform: translateX(1vw);
+}
+
+form > .submit-btn:hover {
+    cursor: pointer;
+}
+
+.file-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.file-container>input{
+    font-weight: 600;
+    font-size: 1.2vw;
+    border-radius: 50px;
+    background-color: #F2F2F2;
+    text-transform: capitalize;
+    padding: 0.5vw 2vw; 
+    width: 27vw;
+    height: 3vw;
+    border: solid thin rgb(163, 163, 163);
+}
+
+
+.file-label{
+    position: relative;
+    width: 100%;
+    
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    margin-bottom: 1vw;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    height: 1vw;
+    border: none;
+    font-weight: 300;
+    text-transform: none;
+    top: auto;
+    
+}
+
+
+
+
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fdfdfd00;
+    margin-bottom: -1px;
+}
+
+
+#footer {
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #000000;
+    padding: 1vw 2vw;
+}
+
+#footer h1 {
+    margin-top: -5vw;
+    font-size: 24vw;
+}
+
+#footer-div {
+    height: 12vh;
+    width: 100%;
+    border-radius: 8px;
+    border-width: thin;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-div h4 {
+    font-size: 2vw;
+    line-height: 2vw;
+
+}
+
+#footer-bottom {
+    height: 10vh;
+    width: 100%;
+    border-top: 2px solid #5e5d5d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#footer-bottom h4 {
+    font-size: 1vw;
+    font-weight: 300; 
+    flex: 0 0 48%;
+}
+
+
+
+@media (max-width:700px){
+    #page1{
+        min-height: 50vh;
+    }
+    #page1>h1 {
+        font-size: 15vw;
+        line-height: 15vw;
+        font-weight: 750;
+    }
+    #form-container {
+        flex-direction: column;
+
+    }
+    #contact-form {
+        flex-direction: column;
+
+    }
+    
+#group-left{
+  
+    width: 100%;
+    padding: 10vw 10vw 0vw 10vw;
+}
+#group-right {
+    width: 100%;
+    padding: 0vw 10vw 10vw 10vw;
+}
+
+label {
+    top: 0vw;
+    left: 1vw;
+    font-size: 6vw;
+    color: #C0C0C0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 99;
+    width: 100%;
+}
+.message-field{
+    text-transform: none;
+    font-weight: 500;
+    font-size: 3vw;
+    height: 10vw;
+}
+input{
+    font-size:4vw;
+}
+.file-container>input:focus{
+    outline: none;
+}
+.file-container>input{
+    font-weight: 600;
+    font-size: 3.5vw; 
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    background-color: #F2F2F2;
+    text-transform: capitalize;
+    padding: 0.5vw 2vw; 
+    width: 55vw;
+    height: 7vw;
+}
+
+
+.file-label{
+    width: 100%;
+    color: #000;
+    font-size: 3vw;
+    border: 1px solid #ccc;
+    margin-bottom: 2vw;
+    height: 1vw;
+    border: none;
+    text-transform: none;
+    height: 6vw;
+    
+}
+
+.add-attachment-btn{
+    width:40vw;
+    font-size: 2.5vw;
+    height: 8vw;
+}
+
+form > .submit-btn {
+ 
+    padding: 0.5em 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 6vw;
+    font-weight: 600;
+    margin-top: -10vw;
+}
+form > .submit-btn > i {
+    width: 6vw;
+    height: 6vw;
+}
+}

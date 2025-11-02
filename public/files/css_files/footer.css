@@ -1,0 +1,129 @@
+#page6{
+    min-height: 50vh;
+    position: relative;
+    width: 100%;
+    padding: 3vw 0vw 0vw 0vw;
+    background-color: #2E4C47;
+    margin-bottom: -1px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    color: #fff;
+}
+
+#page6 > #footer-top{
+    /* background-color: #C9FD0E; */
+    width:100%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    /* flex-direction: row; */
+    align-items: center;
+    gap: 3vw;
+    padding: 1vw 5vw;
+    
+}
+
+
+
+#footer-socials{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid thin #b9b9b952;
+    /* background-color: #C9FD0E; */
+    padding: 2.5vw 0vw;
+}
+#footer-copyrights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer-copyrights h4{
+    font-size: 1.3vw;
+    font-weight: 300;
+}
+#footer-links{
+    color: black;
+    display: flex;
+    gap: 2vw;
+}
+#footer-links > a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5vw;
+}
+#footer-media{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+}
+#footer-media::before{
+
+    content: "Follow us";
+    font-size: 2vw;
+    font-weight: 400;
+
+}
+#footer-media i {   
+     font-size: 2.4vw;
+     cursor: pointer;
+}
+
+#footer-description{
+    display: flex;
+    justify-content: flex-start   ;
+    align-items: start;
+    padding: 2vw 0vw;
+
+}
+#footer-description p{
+    font-size: 2.7vw;
+    text-align: center;
+    font-variant: small-caps;
+    width: 95%;
+    font-weight: 200;
+}
+
+#footer-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 2vw;
+    background-color: #CBEDE0;
+    position: relative;
+}
+ .footer-down-image {
+    width: 10vw;
+
+}
+
+
+.group1,.group2{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+.group1>h6{
+    font-size: 1.5vw;
+    font-weight: 500;
+    position:absolute;
+    top: 10%;
+    margin-right: 2.5vw;
+    color: #000000cd;
+}
+.group2>h6{
+    font-size: 1.5vw;
+    font-weight: 500;
+    position:absolute;
+    top: 10%;
+    margin-left: 2.5vw;
+    color: #000000cd;
+}
+
+.group2{
+    border-left: solid thin #000000cd;
+}

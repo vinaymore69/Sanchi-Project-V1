@@ -1,14 +1,22 @@
+::selection{
+    background-color: #b8f05f70;
+    color: white;
+}
 :root{
     --bpPrimary-600: #65fb65;
 }
-
+#nav-part3{
+    display: none;
+}
 nav{
-    padding: 2vw 2vw;
+    padding: 0vw 1vw;
      width: 100%;
      display: flex;
      justify-content:  space-between;
      align-items: center;
-     height: 16vh;
+     /* height: 16vh; */
+     z-index: 9999;
+     /* background-color: #ff4d4d; */
  }
 
  #nav-part2{
@@ -32,7 +40,7 @@ nav{
  #nav-part2 h4 a {
     color: #1d1d1db3;
     text-decoration: none;
-    z-index: 999;
+    z-index: 99999;
     position: relative;
     transition: all 0.5s ease-in-out;
     display: flex; /* Ensures proper alignment of text and icon */
@@ -45,7 +53,7 @@ nav{
 }
 
 #nav-part2 h4 a span.material-symbols-outlined {
-    font-size: 20px; /* Adjust icon size if needed */
+    font-size: 1.5vw; /* Adjust icon size if needed */
     color: inherit; /* Ensures the icon color matches the text color */
     transition: all 0.3s ease-in-out; /* Adds transition for smooth color change */
 }
@@ -53,7 +61,6 @@ nav{
 #nav-part2 h4:hover a span.material-symbols-outlined {
     color: rgb(133, 249, 135); /* Ensures the icon changes color on hover */
 }
-
 
  
  #nav-part2 h4 select:focus{
@@ -75,67 +82,213 @@ nav{
      border-radius: 0px;
  }
  
-#nav-part3 {
-    background-color: black;
-    width: 10%;
-    height: 100vh;
-    position: absolute;
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    line-height: 8vw;
-    font-size: 8vw;
-    font-weight: 100;
-    gap: 5vw;   
-    right: -100vh;
-    transition: all 0.7s ease-in-out;
-    align-self: center;
-}
-
-#nav-part3 h5 {
-    position: relative; /* Set the h5 position to relative for proper pseudo-element placement */
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-#nav-part3 h5::after {
-    content: '';
-    display: block; 
-    background-color: rgb(31, 173, 234);
-    width: 40%; 
-    height: 1vw; 
-    margin-top: 3px;
-    position: absolute;
-    bottom: -1vw; 
-    left: 0%;
-    transition: all 0.3s ease-in-out;
-    border-radius: 20px;
-}
-
-#nav-part3 h5:hover::after {
-    width: 100%; /* Expand the underline to full width on hover */
-}
-
-#nav-part3 h5 a{
-    text-decoration: none;
-    color: white;
-}
 
 #nav-img{
-    width: 20vw; height: 5vw; 
+    width: 15vw; 
+    height: 15vh; 
 }
-#menu-icon, #nav-part3{
+
+
+#menu-icon{
     display: none;
 }
  
 
+.nav-dashboard-section{
+    /* position: absolute; */
+    /* right: 4vw;
+    top: 6vw; */
+    padding:  0.8vw 1.2vw;
+    border: 1px solid #1d1d1d6e;
+    border-radius: 3vw;
+    font-weight: 400;
+    /* z-index: 999; */
+    /* position: relative; */
+    color: rgba(0, 0, 0, 0.778);
+    font-size: 1.2vw;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav-dashboard-section a{
+    color: #1d1d1db3;
+    text-decoration: none;
+    /* z-index: 99999; */
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+}
+.nav-dashboard-section a:hover{
+    color: aliceblue;
+}
+
+
+
+.nav-dashboard-section a span.material-symbols-outlined {
+    font-size: 1.5vw; 
+    color: inherit; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.nav-dashboard-section:hover a span.material-symbols-outlined {
+    color: rgb(133, 249, 135);
+}
+
+ 
+.nav-dashboard-section select:focus{
+     outline: none;
+ }
+ .nav-dashboard-section:after{
+     content: "";
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background-color: rgb(29, 30, 29);
+     left: 0;
+     bottom: -100%;
+     border-radius: 50%;
+     transition: all 0.5s ease-in-out;
+ }
+ .nav-dashboard-section:hover::after{
+ bottom: 0;
+     border-radius: 0px;
+ }
+
+
+
+ .bpContainer{
+    height: 10vw;
+    width: 20vw;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+
+
+
+
+
+
+
+
+#nav-resources-sub-options {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column; /* Ensure vertical column layout */
+    justify-content: space-between; /* Evenly space items */
+    align-items: center; /* Center items horizontally */
+    padding: 5vh 0; /* Add padding to top and bottom for spacing */
+    right: -150vw;
+    transition: all 1s ease-in-out;
+}
+#nav-resources-heading>h3{
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+#nav-resources-sub-options > #nav-resources-links >h4 > a,
+#nav-resources-sub-options > #nav-resources-closing >h4 > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vw;
+}
+
+#nav-resources-sub-options span.material-symbols-outlined {
+    margin-right: 1vw; /* Add space between icon and text */
+    font-size: 2vw; /* Adjust icon size to match text */
+}
+
+#nav-resources-heading, 
+#nav-resources-closing {
+    width: 100%; /* Make divs take the full width */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#nav-resources-links{
+    width: 100%; /* Make divs take the full width */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    gap: 1vw;
+    /* background-color: #ff4d4d; */
+}
+
+
+
+
+
+
+
+
+/* Error Css */
+
+
+
+
+#error-notification {
+    position: fixed;
+    top: 20vh; /* Adjusted using vh */
+    right: -40vw; /* Start off-screen */
+    width: 20vw; /* Width in vw */
+    padding: 2vh 2vw; /* Padding in vh and vw */
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 10px; /* Border radius in vw */
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1); /* Box shadow in vh */
+    z-index: 1000;
+    transition: right 0.5s ease-out; /* Smooth transition */
+}
+
+#error-notification.show {
+    right: 2vw; /* Slide in to this position */
+}
+
+.error-content {
+    position: relative;
+}
+
+.error-title {
+    font-weight: bold;
+    font-size: 1.5vw; /* Font size in vw */
+}
+
+.error-description {
+    margin-top: 1vh; /* Margin in vh */
+    display: block;
+    font-size: 1vw; /* Font size in vw */
+}
+
+.close-icon {
+    position: absolute;
+    top: 1vh; /* Adjusted using vh */
+    right: 1vw; /* Adjusted using vw */
+    font-size: 2vw; /* Font size in vw */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* End of Error Css */
+
+
+
+
 @media (max-width:1400px) {
     
     #nav-img{
-        width:25vw;
+        width:40vw;
         height: 40%;
     }
     #nav-part2 {
@@ -143,14 +296,89 @@ nav{
     }
     #menu-icon{
         display: block;
+        z-index: 19999;
+        transition: all 1s ease-in-out;
     }
+  
+
+#nav-part3{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 100vw;
+    height:100vh;
+    position: absolute;
+    z-index: 9999;
+    left: -100vw;
+    transition: all 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#nav-part3>#mobile-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #65fb65; */
+    gap: 2vw;
+    font-size: 7vw;
+    margin-top: -30vw;
+}
+
+#nav-part3>#mobile-nav>h5>a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-dashboard-section{
+    position: absolute;
+    right: 12vw;
+    top: 5%;
+    font-size: 3vw;
+}
+.nav-dashboard-section a span{
     
+    font-size: 2vw;
+}
+.nav-dashboard-section a span.material-symbols-outlined {
+    font-size: 4vw; 
+    color: inherit; 
+    transition: all 0.3s ease-in-out;   
+}
 }
 
 
-.bpContainer{
-    height: 10vw;
-    width: 20vw;
+
+/* back top */
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 7vw;
+    right: 1.5vw;
+    display: none;
+    z-index: 999999999;
+    background-color: rgba(204, 255, 211, 0.511);
+    border: none;
+    border-radius: 50vw;
+    padding: 1.3vw 1.5vw;
+    cursor: pointer;
     transition: all 0.5s ease-in-out;
-    
+    -webkit-border-radius: 50vw;
+    -moz-border-radius: 50vw;
+    -ms-border-radius: 50vw;
+    -o-border-radius: 50vw;
+    font-size: 1vw;
+    color: #09431c;
 }
+  
+
+#btn-back-to-top:hover {
+    background-color: #1d6d3c;
+    color: white;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+/* back top end */

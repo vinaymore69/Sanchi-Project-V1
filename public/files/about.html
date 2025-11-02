@@ -1,308 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-    <link rel="stylesheet" href="css_files/about.css" />
-    <link rel="stylesheet" href="css_files/menu.css" />
-    <link rel="stylesheet" href="css_files/language.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down"
-    />
-  </head>
 
-  <body>
-    <div id="main">
-      <div id="languages-section">
-        <div id="closing" style="opacity: 0">
-          <span style="font-size: 100px" id="closing-span">&#10008;</span>
-        </div>
-        <div id="languages">
-          <h1>Choose Language</h1>
-          <div id="language">
-            <h2 value="english" id="english-option">English</h2>
-            <h2 value="hindi" id="hindi-option">हिंदी</h2>
-            <h2 value="marathi" id="marathi-option">मराठी</h2>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="/css_files/menu.css" />
+  <link rel="stylesheet" href="/css_files/about.css" />
+  <link rel="stylesheet" href="/css_files/language.css" />
+  <link rel="stylesheet" href="/css_files/slider.css" />
+  <link rel="stylesheet" href="/css_files/footer.css" />
+
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="languages-section">
+      <div id="closing" style="opacity: 0">
+        <span style="font-size: 100px" id="closing-span">&#10008;</span>
+      </div>
+      <div id="languages">
+        <h1 id="content101">Choose Language</h1>
+        <div id="language">
+          <h2 value="english" id="english-option">English</h2>
+          <h2 value="hindi" id="hindi-option">हिंदी</h2>
+          <h2 value="marathi" id="marathi-option">मराठी</h2>
         </div>
       </div>
-
-      <div id="nav-part3">
-        <span
-          style="
-            font-size: 100px;
-            position: absolute;
-            right: 10%;
-            top: 10%;
-            cursor: pointer;
-          "
-          >&#10008;</span
-        >
-        <h5><a href="index.html" >Home</a></h5>
-        <h5><a href="about.html">About</a></h5>
-        <h5><a href="" >Language</a></h5>
-        <h5><a href="">Contact</a></h5>
-        <h5><a href="">Resources</a></h5>
-      </div>
-
-      <div id="page1">
-
-
-        <nav>
-          <a href="index.html"
-            ><img src="logo.svg" alt="" id="nav-img"
-          /></a>
-          <div id="nav-part2">
-            <h4><a href="index.html" id="content2">Home</a></h4>
-            <h4><a href="about.html" id="content3">About</a></h4>
-            <h4>
-              <a href="#" id="language-toggle"
-              >
-                <span style="font-size: 20px" id="content4">Language</span>
-              </a>
-            </h4>
-            <h4><a href="#" id="content5">Contact</a></h4>
-            <h4><a href="video.html" id="content6">Resources</a></h4>
-          </div>
-          <div id="menu-icon">
-            <span
-              class="material-symbols-outlined"
-              style="font-size: 70px"
-              id="menu-icon-span"
-              >menu</span
-            >
-          </div>
-        </nav>
-
-        <h1 id="content1">
-          Why we <br />
-          exist
-        </h1>
-        <div id="about-content-area">
-          <div id="about-directaccess-dropdown">
-            <div id="about-directaccess-heading">
-              <span id="dropdown-heading" style="display: flex">
-                Jump To Section
-              </span>
-
-              <span
-                class="material-symbols-outlined"
-                id="dropdown-arrow"
-                style="font-size: 1.4vw"
-              >
-                keyboard_arrow_down
-              </span>
-            </div>
-            <div id="about-directaccess-links">
-              <ul>
-                <li><a href="#button1-content">Who We Are</a></li>
-                
-                <li><a href="#button2-content">Vision & Mission</a></li>
-                <li><a href="#button3-content">Our Team</a></li>
-                <li><a href="#button4-content">Organization</a></li>
-                <li><a href="#button5-content">Brand Sponsors</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div id="aboutus-paragraph">
-            <p id="content7">
-              Sanchi is a platform dedicated to the education and empowerment of
-              girls. We exist to create opportunities for young girls to access
-              quality education, nurturing their potential and enabling them to
-              build a brighter future. By supporting Sanchi, you help break
-              barriers to education, fostering self-confidence, independence,
-              and a path out of poverty. Our mission is to empower every girl to
-              dream, learn, and achieve, ensuring they have the tools to thrive
-              and succeed in life.
-            </p>
-          </div>
-
-          <div id="about-hero-image">
-            <!-- <img src="about1.jpg"    alt="Image not found"> -->
-          </div>
-        </div>
-      </div>
-
-    <div id="page2">
-      <img src="images/28.png" alt="Image not found">
     </div>
 
-      <div id="page3">
-        <div id="button1-content">
-          <h3><u>Wh</u>o &nbsp; <u>W</u>e &nbsp; <u>Ar</u>e</h3>
-          <p>
-            We’re the people who believe in second chances. Who believe that we
-            are better together. Who believe in people, until they believe in
-            themselves again.
-          </p>
-          <img src="images/6.jpeg" alt="" />
-          <div id="button1-description">
-            <p>
-              It all started when our founder Rob Caslick and two mates wheeled
-              up a BBQ to Kings Cross to cook the very best, wholesome food for
-              those living rough. Their ’anything but snags’ proposition stood
-              out and it wasn’t long before they garnered a loyal following.
-              ‘How can we scale from here?’, they thought. That’s when the Buy
-              1, Give 1’ model came into play. Rob took a jar around the corner
-              to see if a local domestic violence refuge would like some lunches
-              too and it grew organically from there. <br /><br />
-              We have since collaborated with some of the country’s best chefs
-              to deliver the best meals we can, to domestic violence shelters
-              and people in need. It didn’t take long for our ‘Buy 1, Give 1’
-              idea to extend to luxury gift packs and self care essentials,
-              designed to spark a sense of self-worth at a time of intense
-              vulnerability.
-            </p>
-            <p>
-              Social employment, however, is where we create the greatest
-              impact. Through our flagship ‘Work Work’ employment pathways
-              programs, we hire the women from the shelters we serve, empowering
-              them to re-establish their self-belief and independence, while
-              bridging the ‘love and skills’ gap in their journey to re-entering
-              the workforce after living in crisis.
-              <br /><br />
-              Basically, we’re the people who just want to do some good. And we
-              reckon you’re one of those people, too.
-            </p>
-          </div>
-        </div>
-
-        <div id="button2-content">
-          <h3><u>Visio</u>n &nbsp; <u>&</u> &nbsp; <u>Missio</u>n</h3>
-          <p>
-            Our Purpose, Vision & Values guide and inform our approach and
-            decision-making at all levels of the organisation. They provide the
-            framework and behavioural approach that unites us around a common
-            purpose and define our culture and approach to working with others.
-          </p>
-          <div id="vission-content" class="animate1">
-            <h5>Vision</h5>
-            <p>
-              To demonstrate love and respect to vulnerable people by creating Good Food and Good Things.
-            </p>
-          </div>
-          
-          <div id="mission-content" class="animate1">
-            <h5>Mission</h5>
-            <p>
-              TThat every person feels worthy of love and respect.
-            </p>
-          </div>
-          <div id="values-content" class="animate1">
-            <h5>Values</h5>
-            <p>
-              We are a team, we take care of each other.<br>
-Small things matter most.<br>
-Everyone is equal at our table.<br>
-People before profit.<br>
-Connect with our community. <br>
-            </p>
-          </div>
-        </div>
-
-        <div id="button3-content">
-          <h3><u>Ou</u>r &nbsp; <u>Tea</u>m</h3>
-          <p>
-            It takes a special type of human to be a Two Gooder. Meet the people making change happen.
-          </p>
-         <div id="team-imfo">
-            <div id="team-info-card">
-              <img src="images/10.jpeg" alt="" class="block">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/8.jpeg" alt="" class="block">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/7.jpeg" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/18.jpeg" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/13.jpeg" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/24.jpeg" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/22.jpeg" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/21.jpeg" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-            <div id="team-info-card">
-              <img src="images/28.png" alt="">
-              <h6>Sangeeta Ma'am</h6>
-              <p>Head of SanChi Team</p>
-            </div>
-         </div>
-        </div>
+    <div id="nav-resources-sub-options">
+      <div id="nav-resources-div">
+        <h3 id="content111">Resources</h3>
       </div>
 
-      <div id="page5"></div>
-    </div>
-
-    <div id="footer">
-      <div id="footer-div">
+      <div id="nav-resources-links">
         <h4>
-          Sanchi <br />
-          Education <br />
-          for Girls
+          <a href="/resource/audio"><span class="material-symbols-outlined">library_books</span>
+            <span id="content103">Audio Books</span></a>
+        </h4>
+        <h4>
+          <a href="/resource/video"><span class="material-symbols-outlined">video_library</span>
+            <span id="content104">Video</span></a>
+        </h4>
+        <h4>
+          <a href="/resource/notes"><span class="material-symbols-outlined">download</span>
+            <span id="content105">Notes Download</span></a>
         </h4>
       </div>
-      <h1 id="content0">SanChi</h1>
-      <div id="footer-bottom">
-        <h4>Copyright: @SanChi Team</h4>
-        <h4>Resources</h4>
-        <h4>Vidyalankar Polytechnic</h4>
-        <h4>RedBox Agency</h4>
+
+      <div id="nav-resources-closing">
+        <h4>
+          <a href="#"><span class="material-symbols-outlined">close</span>
+            <span id="content106">Close</span></a>
+        </h4>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
-      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
-      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="about.js"></script>
-  </body>
+    <div id="page1">
+      <nav>
+        <a href="index.html">
+          <img src="images/vp logo.png" alt="" id="nav-img" />
+        </a>
+        <div id="nav-part2">
+          <h4>
+            <a href="index.html">
+              <span class="material-symbols-outlined">home</span>
+              <span style="font-size: 1.2vw" id="content2">Home</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="about.html">
+              <span class="material-symbols-outlined">info</span>
+              <span style="font-size: 1.2vw" id="content3">About</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="#" id="language-toggle">
+              <span class="material-symbols-outlined">language</span>
+              <span style="font-size: 1.2vw" id="content4">Language</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="contact.html">
+              <span class="material-symbols-outlined">contact_page</span>
+              <span style="font-size: 1.2vw" id="content5">Contact</span>
+            </a>
+          </h4>
+          <h4 class="nav-resources-section">
+            <a href="#">
+              <span class="material-symbols-outlined">video_library</span>
+              <span style="font-size: 1.2vw" id="content6">Resources</span>
+            </a>
+          </h4>
+          <h4 class="nav-dashboard-section" id="dashboard-section">
+            <a href="/user/dashboard">
+              <span class="material-symbols-outlined">dashboard</span>
+              <span id="content112">Dashboard</span>
+            </a>
+          </h4>
+        </div>
+        <div id="menu-icon">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+      </nav>
+
+      <div id="nav-part3">
+        <div id="mobile-nav">
+          <h5><a href="index.html" id="content107">Home</a></h5>
+          <h5><a href="about.html" id="content108">About</a></h5>
+          <h5>
+            <a id="language-toggle1"><span id="content116">Languages</span></a>
+          </h5>
+          <h5><a href="contact.html" id="content110">Contact</a></h5>
+          <h5><a href="#" id="content118">Resources</a></h5>
+        </div>
+      </div>
+
+      <h1 id="content1">Why we exist</h1>
+      <div id="about-content-area">
+        <div id="about-directaccess-dropdown">
+          <div id="about-directaccess-heading">
+            <span id="dropdown-heading" style="display: flex">
+              <h5 id="content8">Jump To Section</h5>
+            </span>
+
+            <span class="material-symbols-outlined" id="dropdown-arrow">
+              keyboard_arrow_down
+            </span>
+          </div>
+
+          <div id="about-directaccess-links">
+            <ul>
+              <li><a href="#button1-content" id="content9">Who We Are</a></li>
+
+              <li>
+                <a href="#button2-content" id="content10">Vision & Mission</a>
+              </li>
+              <li><a href="#button3-content" id="content11">Our Team</a></li>
+              <li>
+                <a href="#page4" id="content12">Our Contributions</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div id="aboutus-paragraph">
+          <p id="content7">
+            Sanchi is a platform dedicated to the education and empowerment of
+            girls. We exist to create opportunities for young girls to access
+            quality education, nurturing their potential and enabling them to
+            build a brighter future. By supporting Sanchi, you help break
+            barriers to education, fostering self-confidence, independence,
+            and a path out of poverty. Our mission is to empower every girl to
+            dream, learn, and achieve, ensuring they have the tools to thrive
+            and succeed in life.
+          </p>
+        </div>
+
+        <div id="about-hero-image">
+          <img src="All domains Images/Vertical Images JPG/27.jpg" alt="Image not found">
+        </div>
+      </div>
+    </div>
+
+    <div id="page2">
+      <img src="All domains Images/Horizontal Images JPG/5.jpg" alt="Image not found" />
+    </div>
+
+    <div id="page3">
+      <div id="button1-content">
+        <h3 id="content69" class="domains-headings"><u>Wh</u>o &nbsp; <u>W</u>e &nbsp; <u>Ar</u>e</h3>
+        <p id="content68">
+          We’re the people who believe in second chances. Who believe that we
+          are better together. Who believe in people, until they believe in
+          themselves again.
+        </p>
+        <img src="All domains Images/Horizontal Images JPG/15.jpg" alt="" />
+        <div id="button1-description">
+          <p id="content14">
+            It all began with a shared vision to uplift and empower young
+            girls through education. Our committee started small, with a
+            handful of passionate individuals determined to address the
+            barriers that prevent girls from accessing quality learning
+            opportunities. By focusing on mentorship, skill development, and
+            community support, our efforts quickly gained momentum, reaching
+            more lives than we ever imagined.
+            <br /><br />
+            The idea was simple yet powerful: create opportunities for girls
+            to dream big and achieve their potential. We began by organizing
+            workshops, providing scholarships, and collaborating with
+            educators to deliver impactful programs.
+          </p>
+          <p id="content15">
+            Over time, our initiatives expanded to include career counseling,
+            leadership training, and outreach efforts in underprivileged
+            communities. Our greatest impact comes from fostering confidence
+            and self-reliance among the girls we support. By equipping them
+            with the tools and encouragement they need, we help them transform
+            challenges into stepping stones toward success.
+            <br /><br />
+            At the heart of it all, we are a group of dedicated individuals
+            committed to creating a brighter future. Together, with the
+            support of like-minded partners and the community, we continue to
+            champion the cause of girls' education, one step at a time.
+          </p>
+        </div>
+      </div>
+
+      <!-- <div id="button2-content">
+
+        <h3 class="domains-headings"><u>Visio</u>n &&nbsp; <u>Missio</u>n</h3>
+        <p id="content16">
+          Our Purpose, Vision, and Values guide and shape our approach and
+          decision-making at every level of the committee. They provide the
+          foundation for our efforts, uniting us around a common goal: to
+          empower and uplift young girls through education and opportunities
+          that foster growth, equality, and success.
+        </p>
+        <div id="vission-content" class="animate1">
+          <h5 id="content19">Vision</h5>
+          <p id="content20">
+            To empower every girl with access to quality education, helping her reach her full potential and become
+            confident leaders in a more inclusive and equitable world.
+          </p>
+        </div>
+
+        <div id="mission-content" class="animate1">
+          <h5 id="content17">Mission</h5>
+          <p id="content18">To provide education, mentorship, and resources that enable girls to thrive academically and
+            personally, creating a supportive environment where they feel valued and capable of achieving their dreams.
+          </p>
+        </div>
+        <div id="values-content" class="animate1">
+          <h5 id="content21">Values</h5>
+          <p id="content22">
+            We are a team, we take care of each other.<br />
+            Small things matter most.<br />
+            Everyone is equal at our table.<br />
+            People before profit.<br />
+            Connect with our community. <br />
+          </p>
+        </div>
+      </div> -->
+
+      <div id="button2-content">
+          
+        <h3 class="domains-headings" id="content70"><u>Visio</u>n &&nbsp; <u>Missio</u>n</h3>
+        <p id="content16">
+          We envision a dynamic and inclusive community where students actively contribute to society through meaningful engagement across eight key domains. Our goal is to foster leadership, teamwork, and social responsibility while creating a positive impact in diverse areas:
+        </p>
+        <div id="vission-content" class="animate1">
+          <h5 id="content19">Vision</h5>
+          <p id="content20">
+            We aim to cultivate a culture of responsibility, leadership, and service, where students actively contribute to society through impactful initiatives. By engaging in diverse domains, we envision a future where learning goes beyond classrooms, fostering well-rounded individuals dedicated to making a difference.            </p>
+        </div>
+
+        <div id="mission-content" class="animate1">
+          <h5 id="content17">Mission</h5>
+          <p id="content18">
+            Our mission is to empower students by providing opportunities to participate in social, cultural, and educational initiatives. Through teamwork and hands-on experiences, we strive to enhance skills, promote awareness, and drive positive change in both the campus and the wider community.            </p>
+        </div>
+        <div id="values-content" class="animate1">
+          <h5 id="content21">Values</h5>
+          <p id="content22">
+            We believe in teamwork, leadership,
+            
+            and compassion as the foundation of our efforts.<br />
+            Integrity, inclusivity, 
+            and commitment drive us to create meaningful projects that uplift society while fostering personal and professional growth in every volunteer.<br />
+         </p>
+        </div>
+      </div>
+
+      
+      <div id="button3-content" >
+        <h3 id="content71"><u>Ou</u>r &nbsp; <u>Tea</u>m</h3>
+        <p id="content23">
+          It takes a passionate and dedicated individual to be part of our committee. Meet the changemakers who are making a difference.
+        </p>
+        <div id="team-imfo">
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/1.jpg" alt="" class="block" />
+            <h6 id="content24">Dr. Ashish Ukidve </h6>
+            <p id="content25">Principal of Vidyalankar Polytechnic</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/2.jpg" alt="" class="block" />
+            <h6 id="content26">Mrs. Vaishali Malkar</h6>
+            <p id="content27">Vice-Principal of Vidyalankar Polytechnic</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/17.jpg" alt="" />
+            <h6 id="content73">Prof. Hemangi Naikare</h6>
+            <p id="content74">Convenor of Volunterring Committee</p>
+          </div>
+          
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/16.jpg" alt="" />
+            <h6 id="content30">Prof. Prerana Jalgaonkar</h6>
+            <p id="content31">Member of Volunterring Committee</p>
+          </div>
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/25.jpg" alt="" />
+            <h6 id="content64">Prof. Suyog Satawalekar</h6>
+            <p id="content65">Member of Volunterring Committee</p>
+          </div>
+          
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/18.jpg" alt="" />
+            <h6 id="content28">Prof. Sangeeta Wankhede</h6>
+            <p id="content29">Girls Education: (SanChi)</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/24.jpg" alt="" />
+            <h6 id="content66">Prof. Chetashri Bhusari</h6>
+            <p id="content67">Girls Education: (SanChi)</p>
+          </div>
+          
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/27.jpg" alt="" />
+            <h6 id="content32">Prof. Tanvi Gursale</h6>
+            <p id="content33">Primary Education: </p>
+          </div>
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/29.jpg" alt="" />
+            <h6 id="content34">Prof. Kalyani Pawar</h6>
+            <p id="content35">Primary Education: </p>
+          </div>
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/14.jpg" alt="" />
+            <h6 id="content36">Prof. Anjum  Mujawar</h6>
+            <p id="content37">Under Privileged Children Walefaire</p>
+          </div>
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/15.jpg" alt="" />
+            <h6 id="content38">Prof. Arpit Bankar</h6>
+            <p id="content39">Under Privileged Children Walefaire</p>
+          </div>
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/12.jpg" alt="" />
+            <h6 id="content40">Prof. Madhavi. M</h6>
+            <p id="content41">Environment</p>
+          </div>
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/13.jpg" alt="" />
+            <h6 id="content42">Prof. Shilpa Gaikwad</h6>
+            <p id="content43">Environment</p>
+          </div>
+
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/11.jpg" alt="" />
+            <h6 id="content44">Prof. Merilyn  Mathews</h6>
+            <p id="content45">Antinarcotics</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/26.jpg" alt="" />
+            <h6 id="content46">Prof. Kshama  Sawant</h6>
+            <p id="content47">Antinarcotics</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/21.jpg" alt="" />
+            <h6 id="content48">Prof. Pranesh Naik  </h6>
+            <p id="content49">Under Privileged Children Walefaire</p>
+          </div> 
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/10.jpg" alt="" />
+            <h6 id="content50">Prof. Predeep Shirke  </h6>
+            <p id="content51">Digital Literacy</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/28.jpg" alt="" />
+            <h6 id="content52">Prof. Ketan Bagade</h6>
+            <p id="content53">Digital Literacy</p>
+          </div>
+
+
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/23.jpg" alt="" />
+            <h6 id="content62">Deepak Jain</h6>
+            <p id="content63">Founder of DadsInTown and RedBox Agency</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/19.jpg" alt="" />
+            <h6 id="content54">Vinay More</h6>
+            <p id="content55">Frontend Developer</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/20.jpg" alt="" />
+            <h6 id="content56">Pruthvesh Gharal</h6>
+            <p id="content57">Backend Developer</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/22.jpg" alt="" />
+            <h6 id="content58"> Mushahid Raza</h6>
+            <p id="content59">Head of SanChi Team</p>
+          </div>
+          <div id="team-info-card">
+            <img src="All domains Images/All Faculty Images/30.jpg" alt="" />
+            <h6 id="content60">Jay Karle</h6>
+            <p id="content61">Chatbot Developer</p>
+          </div>
+          
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div id="page4">
+      <h3 id="content72" class="domains-headings"><u>Ou</u>r&nbsp;<u>Contribution</u>s</h3>
+
+      <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/3.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/4.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/5.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/6.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/7.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/8.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/9.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/10.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/11.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/12.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/13.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/14.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/15.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/16.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/17.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/18.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/19.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/20.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/21.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/22.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/23.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/24.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="All domains Images/Vertical Images JPG/25.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next navigate" style=" color: rgb(251, 251, 251);"></div>
+      <div class="swiper-button-prev navigate"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <div id="page6">
+      <div id="footer-top">
+        <div id="footer-socials">
+          <div id="footer-media">
+           <a href="https://www.instagram.com/vp_vidyalankar/" style="text-decoration: none; color: #fff;"> <i class="fa-brands fa-instagram fa-2x" ></i></a>
+           <a href="https://www.linkedin.com/in/vidyalankarpolytechnic/" style="text-decoration: none; color: #fff;"><i class="fa-brands fa-linkedin"></i></a> 
+           <a href="https://x.com/VidyalankarPoly" style="text-decoration: none; color: #fff;"><i class="fa-brands fa-x-twitter"></i></a> 
+          </div>
+
+          <div id="footer-copyrights">
+            <h4 id="content201">© 2025 Vidyalankar Polytechnic. All Rights Reserved.</h4>
+          </div>
+
+          <div id="footer-links">
+            <a href="privacypolicy.html" id="content202">Privacy Policy</a>
+            <a href="gallery.html" id="content203">Gallery</a>
+          </div>
+        </div>
+        <div id="footer-description">
+          <p id="content204">
+            "Volunteering is at the very core of being a human. No one has made it through life without someone else's help." — Heather French Henry
+          </p>
+        </div>
+      </div>
+
+      <div id="footer-down">
+
+        <div class="group1">
+          <img src="All domains Images/All Logos/5.png" alt="" class="footer-down-image" />
+        <img src="All domains Images/All Logos/4.png" alt="" class="footer-down-image"/>
+        <h6 id="content205">Inovators</h6>
+        </div>
+        <!-- <img src="All domains Images/All Logos/1.png" alt="" /> -->
+
+        <div class="group2">
+          <h6 id="content206">Sponcers</h6>
+          <img src="images/redbox logo.png" alt="" class="footer-down-image"  />
+          <img src="images/dads in town logo.png" alt="" class="footer-down-image"  />
+      </div>
+    </div>
+
+    <!-- footer section end -->
+
+    <!-- Page 5 transparent for footer -->
+
+    <!-- <div id="page5"></div> -->
+    <!-- Page 5 transparent for footer -->
+  </div>
+  </div>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/15/19/20250115191515-LBSDTJT5.js"></script>
+    <script src="/javascript_files/about.js"></script>
+    <script src="/javascript_files/menu.js"></script>
+    <script src="/javascript_files/resource.js"></script>
+    <script src="/javascript_files/lenis.js"></script>
+</body>
 </html>

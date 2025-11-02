@@ -18,7 +18,7 @@
   color: #555;
 }
 
-#audio-panel-input,
+#audioPanelInput,
 #audio-panel-textarea,
 #audio-panel-file {
   width: 100%;
@@ -62,4 +62,9 @@
   box-sizing: border-box;
   height: 7vw;
   resize: none;
+}
+
+.small-audio-info-header {
+  vertical-align: middle;
+  font-size: 1em;
 }

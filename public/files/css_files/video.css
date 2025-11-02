@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+#page1{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0vw 3vw 10vw 2vw;
+    background-color: #ececec;
+}
+#video-category {
+    padding: 2vw 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc; 
+    gap:1.5vw;
+    justify-content: center;
+}
+
+#video-category #category-tittle {
+    font-size: 2vw;
+    margin-bottom: -0.7vw;
+}
+
+#video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 100%;
+    justify-content: start;
+}
+
+#video-card {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    background-color: #ffffff;
+    border-radius: 0.2vw;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 0 0 1.2vw 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#video-card:hover {
+    transform: translateY(-0.7vw);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.3);
+} 
+
+#video-card #video-thumbnail{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+#video-card h4 {
+    font-size: 1vw;
+    margin-top:  1vw;
+    padding-left: 01vw;
+
+}
+
+#video-card p {
+    font-size: 0.7vw;
+    padding-left: 01vw;
+    color: #555;
+}
+
+/* Responsive Design *//* Responsive Design */
+@media (max-width: 768px) {
+    #video-card {
+        width: 45%; /* 2 cards per row */
+        height: auto; /* Allow content to adjust dynamically */
+        padding: 1vw; /* Add padding for better spacing */
+    }
+
+    #video-card #video-thumbnail{
+        height: auto; /* Keep aspect ratio intact */
+        max-height: 12vw; /* Limit video height for smaller screens */
+        border-radius: 1vw;
+    }
+
+    #video-card h4 {
+        font-size: 1.5vw; /* Increase title size */
+      
+        }
+
+    #video-card p {
+     
+        font-size: 1vw; /* Adjust description size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    #video-card {
+        width: 90%; /* 1 card per row */
+        height: auto;
+        padding: 2vw;
+    }
+
+    #video-card #video-thumbnail {
+        height: auto; /* Ensure videos scale dynamically */
+        max-height: 30vw; /* Adjust video height for mobile devices */
+    }
+
+    #video-card h4 {
+        font-size: 3.5vw; /* Scale title size appropriately */
+    }
+
+    #video-card p {
+        font-size: 2.5vw; /* Scale description size appropriately */
+    }
+}
+
+
+#page5{
+    height: 115vh;
+    width: 100%;
+
+}
+
+
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 105vh;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #000000;
+    padding: 1vw 2vw;
+}
+
+#footer h1{
+    margin-top: -5vw;
+    font-size: 24vw;
+}
+
+#footer-div{
+    height: 12vh;
+    width: 100%;
+    /* background-color: #79fd0e; */
+    border-radius: 8px;
+    /* border: 1px solid #ffffff5f ; */
+    border-width: thin;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+#footer-div h4{
+    font-size: 2vw;
+    line-height: 2vw;
+
+}
+
+#footer-bottom{
+    height: 10vh;
+    width: 100%;
+    border-top: 2px solid #5e5d5d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+#footer-bottom h4{
+    font-size: 1vw;
+    font-weight: 300;
+}

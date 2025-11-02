@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Audio Converter</title>
+</head>
+<body>
+    <h1>Text to Audio Converter</h1>
+    <form id="textForm">
+        <input type="file" id="textFile" accept=".txt" required>
+        <button type="submit">Convert to Audio</button>
+    </form>
+    <div id="textDisplay"></div>
+    <audio controls id="audioPlayer" style="display:none;"></audio>
+    <!-- Manual Download Button -->
+    <button id="downloadBtn" style="display:none;">Download Audio</button>
+
+    <script src="javascript_files/textToSpeach.js"></script>
+</body>
+</html>

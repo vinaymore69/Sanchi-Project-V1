@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#main {
+    position: relative;
+    z-index: 10;
+}
+
+#page1>h1 {
+    font-weight: 600;
+    font-size: 8vw;    
+    width: 60%;
+    line-height: 9vw;
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    text-transform: uppercase;
+}
+
+#page1 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0vw 2vw 2vw 2vw;
+    background-color: #ffffff;
+    margin-bottom: -1px;
+}
+
+#form-container {
+    background-color: #F2F2F2;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    padding: 2vw;
+}
+
+#signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 8px;
+    gap: 5vw;
+}
+
+#group-left, 
+#group-right {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 20px;
+    justify-content: flex-start;
+}
+#group-left .form-group,
+#group-right .form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Separator line */
+}
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+label {
+    position: absolute;
+    top: 0vw;
+    left: 10px;
+    font-size: 3vw;
+    color: #C0C0C0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 99;
+    width: 100%;
+}
+
+input, select,textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 2vw;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: -1vw;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    height: 5vw;
+    border: none;
+    font-weight: 700;
+    /* background-color: #202120; */
+    text-transform: uppercase;
+}
+
+label:hover{
+    color: #000;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+select:focus {
+    outline: none;
+    background: transparent; /* Background color on focus */
+    color: #000000; /* Text color on focus */
+}   
+select:focus + label::after {
+    color: #fff; /* Change arrow color on focus */
+}
+    
+input:focus + label,
+textarea:focus + label,
+select:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label,
+select:not([value=""]):valid + label {
+    top: -5px;
+    left: 5px;
+    font-size: 0.75rem;
+    color: #000;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #000;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 1vw;
+}
+
+#check {
+    display: flex;
+    flex-direction:row ;
+    gap: 1vw;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#sp {
+    width: 2vw;
+    height:2.5vw;
+    background-color: #000000;
+    border-radius: 0px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-top: -1vw;
+}
+
+
+
+
+
+
+#check label {
+    position: static;
+    font-size:  2vw;
+    text-transform: none;
+    font-weight: 500;
+    color:  #EDEDED;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    
+}
+#check label:hover{
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+    #signup-form {
+        flex-direction: column;
+    }
+
+    #group-left, 
+    #group-right {
+        width: 100%;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    input, select {
+        height: 5vw;
+    }
+}
+
+
+
+/* Change the label color when hovering over input or select */
+input:hover + label,
+select:hover + label {
+    color: #000;
+    cursor: pointer;
+}
+
+
+form > button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 2vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    width: auto; /* Ensures the button width is only as wide as its content */
+    margin: 0; /* Aligns the button to the left */
+}
+
+form > button > i {
+    background-image: url(https://www.bottega53.com/svg/arrow-right.svg);
+    width: 3vw;
+    height: 3vw;
+    background-size: cover;
+    margin-left: 0.2em;
+    transition: transform 0.5s ease-in-out;
+}
+
+form > button:hover > i {
+    transform: translateX(1vw);
+}
+
+form > button:hover {
+    cursor: pointer;
+}
+
+

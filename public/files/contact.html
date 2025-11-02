@@ -2,228 +2,301 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us Page</title>
+  <link rel="stylesheet" href="/css_files/contact.css" />
+  <link rel="stylesheet" href="/css_files/menu.css">
+  <!-- <link rel="stylesheet" href="/css_files/style.css" /> -->
+  <link rel="stylesheet" href="/css_files/footer.css" />
+  <link rel="stylesheet" href="/css_files/language.css">
 
-        body {
-            min-height: 100vh;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f9f9f9;
-        }
-
-        .form-container {
-            width: 100%;
-            max-width: 600px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-container form {
-            width: 100%;
-        }
-
-        .form-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 22px;
-        }
-
-        .form-group label {
-            flex: 1;
-            font-size: 18px;
-            text-align: right;
-            padding-right: 15px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 15px;
-            padding: 10px;
-        }
-
-        .form-group input[type="file"] {
-            padding: 5px;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .file-container {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .file-container input {
-            flex: 1;
-        }
-
-        legend {
-            font-weight: bold;
-            font-size: 35px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .submit-btn {
-            display: block;
-            width: 100%;
-            background-color: #28a745;
-            color: white;
-            font-size: 18px;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: white;
-            color: #28a745;
-            border: 1px solid #28a745;
-        }
-
-        .add-attachment-btn {
-            margin-left: auto;
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            padding: 8px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
-        .add-attachment-btn:hover {
-            background-color: #0056b3;
-        }
-
-        .valid {
-            border-color: green;
-        }
-
-        .invalid {
-            border-color: red;
-        }
-    </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
 </head>
 
 <body>
-    <div class="form-container">
-        <form action="/contact" id="contact-form" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <legend>Contact Us</legend>
+  <div id="languages-section">
+    <div id="closing" style="opacity: 0">
+      <span style="font-size: 100px" id="closing-span">&#10008;</span>
+    </div>
+    <div id="languages">
+      <h1 id="content101">Choose Language</h1>
+      <div id="language">
+        <h2 value="english" id="english-option">English</h2>
+        <h2 value="hindi" id="hindi-option">हिंदी</h2>
+        <h2 value="marathi" id="marathi-option">मराठी</h2>
+      </div>
+    </div>
+  </div>
 
-                <!-- First Name -->
-                <div class="form-group">
-                    <label for="name">First Name:</label>
-                    <input id="name" name="first_name" placeholder="Enter your First Name" required>
-                </div>
-
-                <!-- Last Name -->
-                <div class="form-group">
-                    <label for="lastname">Last Name:</label>
-                    <input id="lastname" name="last_name" placeholder="Enter your Last Name">
-                </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="emailfield">E-mail:</label>
-                    <input type="email" id="emailfield" name="email" placeholder="Enter your E-mail">
-                </div>
-
-                <!-- Title -->
-                <div class="form-group">
-                    <label for="title">Title:</label>
-                    <input id="title" name="title" placeholder="Enter a short title" required>
-                </div>
-
-                <!-- Message -->
-                <div class="form-group">
-                    <label for="messagefield">Message:</label>
-                    <textarea id="messagefield" name="message" placeholder="Enter your message"></textarea>
-                </div>
-
-                <!-- Attachments -->
-                <div id="attachments-container">
-                    <div class="file-container">
-                        <input type="file" id="attachment-1" name="attachments[]" accept="image/*">
-                        <input type="text" id="filename-1" name="file_names[]"
-                            placeholder="Enter file name (please don't add extension names like .jpg, .png)">
-                    </div>
-                </div>
-
-                <!-- Add Attachment Button -->
-                <button type="button" class="add-attachment-btn" id="add-attachment">
-                    + Add Attachment
-                </button>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submit-btn">Submit</button>
-            </fieldset>
-        </form>
+  <!-- resources absolute page -->
+  <div id="nav-resources-sub-options">
+    <div id="nav-resources-div">
+      <h3 id="content102">Resources</h3>
     </div>
 
-    <script>
-        const attachmentsContainer = document.getElementById('attachments-container');
-        const addAttachmentBtn = document.getElementById('add-attachment');
+    <div id="nav-resources-links">
+      <h4>
+        <a href="/resource/audio" target="_self"><span class="material-symbols-outlined">library_books</span>
+          <span id="content103">Audio Books</span></a>
+      </h4>
+      <h4>
+        <a href="/resource/video" target="_self"><span class="material-symbols-outlined">video_library</span>
+          <span id="content104">Video</span></a>
+      </h4>
+      <h4>
+        <a href="/resource/notes" target="_self"><span class="material-symbols-outlined">download</span>
+          <span id="content105">Notes Download</span></a>
+      </h4>
+    </div>
 
-        let attachmentCount = 1;
+    <div id="nav-resources-closing">
+      <h4>
+        <a href="#"><span class="material-symbols-outlined">close</span>
+          <span id="content106">Close</span></a>
+      </h4>
+    </div>
+  </div>
+  <!-- resources absolute page end-->
 
-        addAttachmentBtn.addEventListener('click', () => {
-            attachmentCount++;
+  <div id="main">
 
-            // Create new file and file name input fields
-            const fileContainer = document.createElement('div');
-            fileContainer.classList.add('file-container');
 
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.name = 'attachments[]';
-            fileInput.id = `attachment-${attachmentCount}`;
-            fileInput.accept = 'image/*';
+    <div id="page1">
 
-            const fileNameInput = document.createElement('input');
-            fileNameInput.type = 'text';
-            fileNameInput.name = 'file_names[]';
-            fileNameInput.id = `filename-${attachmentCount}`;
-            fileNameInput.placeholder = 'Enter file name';
+      <nav>
+        <a href="index.html">
+          <img src="/images/vp logo.png" alt="Vidyalankar Polytechnic" id="nav-img" />
+        </a>
+        <div id="nav-part2">
+          <h4>
+            <a href="index.html">
+              <span class="material-symbols-outlined">home</span>
+              <span style="font-size: 1.2vw" id="content107">Home</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="about.html">
+              <span class="material-symbols-outlined">info</span>
+              <span style="font-size: 1.2vw" id="content108">About</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="#" id="language-toggle">
+              <span class="material-symbols-outlined">language</span>
+              <span style="font-size: 1.2vw" id="content109">Language</span>
+            </a>
+          </h4>
+          <h4>
+            <a href="contact.html">
+              <span class="material-symbols-outlined">contact_page</span>
+              <span style="font-size: 1.2vw" id="content110">Contact</span>
+            </a>
+          </h4>
+          <h4 class="nav-resources-section">
+            <a href="#">
+              <span class="material-symbols-outlined">video_library</span>
+              <span style="font-size: 1.2vw" id="content111">Resources</span>
+            </a>
+          </h4>
+          <h4 class="nav-dashboard-section" id="dashboard-section">
+            <a href="/user/dashboard">
+              <span class="material-symbols-outlined">dashboard</span>
+              <span id="content112">Dashboard</span>
+            </a>
+          </h4>
+        </div>
+        <div id="menu-icon">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+      </nav>
 
-            // Append inputs to the new container
-            fileContainer.appendChild(fileInput);
-            fileContainer.appendChild(fileNameInput);
+      <div id="nav-part3">
+        <div id="mobile-nav">
+          <h5><a href="index.html" id="content114">Home</a></h5>
+          <h5><a href="about.html" id="content115">About</a></h5>
+          <h5>
+            <a id="language-toggle1"><span id="content116">Languages</span></a>
+          </h5>
+          <h5><a href="contact.html" id="content117">Contact</a></h5>
+          <h5><a href="#" id="content118">Resources</a></h5>
+        </div>
+      </div>
 
-            // Append the new container to the attachments section
-            attachmentsContainer.appendChild(fileContainer);
+      <h1 id="content10">Contact us</h1>
+
+      <div id="form-container">
+        <form id="contact-form" method="post" enctype="multipart/form-data">
+
+
+          <div id="group-left">
+
+
+            <!-- First Name -->
+            <div class="form-group">
+              <input id="name" name="first_name" placeholder=" " required />
+              <label for="name" id="content1">First Name:</label>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group">
+              <input id="lastname" name="last_name" placeholder=" " />
+              <label for="lastname" id="content2">Last Name:</label>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <input type="email" id="emailfield" name="email" placeholder=" " />
+              <label for="emailfield" id="content3">E-mail:</label>
+            </div>
+          </div>
+
+          <div id="group-right">
+            <!-- Title -->
+            <div class="form-group">
+              <input id="title" name="title" placeholder=" " required />
+              <label for="title" id="content4">Title:</label>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <textarea id="messagefield" class="message-field" name="message" placeholder=" "></textarea>
+              <label for="messagefield" id="content5">Message:</label>
+            </div>
+
+            <!-- Attachments -->
+
+            <div class="file-container" id="attachments-container">
+              <label for="" class="file-label" id="content9">* File size should not be greater than 2 mb & also file
+                without extension</label>
+              <input type="file" id="attachment-1" name="attachments[]" accept="image/*" />
+              <input type="text" id="filename" name="file_names[]" placeholder=" Enter File Name" />
+              <!-- <label for="filename-1">File Name (without extension):</label> -->
+            </div>
+
+
+            <!-- Add Attachment Button -->
+            <button type="button" class="add-attachment-btn" id="add-attachment">
+              <span id="content8">+ Add More Attachment</span>
+            </button>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn"><span id="content6">Submit</span><i></i></button>
+        </form>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div id="page6">
+      <div id="footer-top">
+        <div id="footer-socials">
+          <div id="footer-media">
+            <a href="https://www.instagram.com/vp_vidyalankar/" style="text-decoration: none; color: #fff;"> <i
+                class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/vidyalankarpolytechnic/" style="text-decoration: none; color: #fff;"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/VidyalankarPoly" style="text-decoration: none; color: #fff;"><i
+                class="fa-brands fa-x-twitter"></i></a>
+          </div>
+
+          <div id="footer-copyrights">
+            <h4 id="content201">© 2025 Vidyalankar Polytechnic. All Rights Reserved.</h4>
+          </div>
+
+          <div id="footer-links">
+            <a href="privacypolicy.html" id="content202">Privacy Policy</a>
+            <a href="gallery.html" id="content203">Gallery</a>
+          </div>
+        </div>
+        <div id="footer-description">
+          <p id="content204">
+            Volunteering is at the very core of being a human. No one has made it through life without someone else's
+            help. — Heather French Henry
+          </p>
+        </div>
+      </div>
+
+      <div id="footer-down">
+
+        <div class="group1">
+          <img src="/All domains Images/All Logos/5.png" alt="Image not found" class="footer-down-image" />
+          <img src="/All domains Images/All Logos/4.png" alt="Image not found" class="footer-down-image" />
+          <h6 id="content205">Inovators</h6>
+        </div>
+        <!-- <img src="All domains Images/All Logos/1.png" alt="" /> -->
+
+        <div class="group2">
+          <h6 id="content206">Sponcers</h6>
+          <img src="/images/redbox logo.png" alt="Image not found" class="footer-down-image" />
+          <img src="/images/dads in town logo.png" alt="Image not found" class="footer-down-image" />
+        </div>
+      </div>
+
+      <!-- footer section end -->
+
+      <!-- Page 5 transparent for footer -->
+
+      <!-- <div id="page5"></div> -->
+      <!-- Page 5 transparent for footer -->
+    </div>
+  </div>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/01/15/19/20250115191515-LBSDTJT5.js"></script>
+  <script src="/javascript_files/contact.js"></script>
+  <script src="/javascript_files/contactFrontend.js"></script>
+  <script src="/javascript_files/menu.js"></script>
+  <script src="/javascript_files/lenis.js"></script>
+  <script src="/javascript_files/resource.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Show submitting message
+      const submitMessage = document.createElement('div');
+      submitMessage.textContent = 'Submitting your message...';
+      submitMessage.style.cssText = 'position: fixed; top: 20px; right: 20px; padding: 15px; background: #4CAF50; color: white; border-radius: 5px; z-index: 1000;';
+      document.body.appendChild(submitMessage);
+
+      const formData = new FormData(e.target);
+
+      try {
+        const response = await fetch('/contact', {
+          method: 'POST',
+          body: formData
         });
 
-        document.getElementById("contact-form").addEventListener("submit", (e) => {
-            alert("Form data submitted successfully!");
-            form.reset();
-        });
+        const data = await response.text();
 
-    </script>
+        if (response.status === 200 && data === "Your email has been sent.") {
+          // Remove submitting message
+          submitMessage.remove();
+
+          // Show success message
+          alert('Form submitted successfully!');
+
+          // Reset the form
+          e.target.reset();
+        } else {
+          throw new Error(data);
+        }
+      } catch (error) {
+        // Remove submitting message
+        submitMessage.remove();
+
+        // Show error message
+        alert('Error submitting form: ' + error.message);
+      }
+    });
+  </script>
 </body>
 
 </html>

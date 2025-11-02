@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+}
+#page1{
+
+    padding: 0 2vw;
+}
+
+
+h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    /* background-color: #5e5d5d; */
+    text-align: center;
+}
+
+#note-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 96%;
+    justify-content: start;
+    margin: 2vw auto;
+}
+
+.note-link {
+    flex: 0 0 auto;
+    width: 20%;
+    text-decoration: none;
+}
+
+#note-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20vw;
+    background-color: #ffffff;
+    border-radius: 0.2vw;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#note-thumbnail{
+    height: 13vw;
+}
+
+#note-card:hover {
+    transform: translateY(-0.7vw);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.3);
+} 
+
+.note-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    margin-top: 1vw;
+}
+
+.note-name {
+    color: black;
+    font-size: 1.4vw;
+    font-weight: 600;
+    padding-left: 0.5vw;
+}
+
+.note-class {
+    font-size: 1.3vw;
+    margin-top: 3px;
+    color: grey;
+    padding-left: 0.5vw;
+}
+
+#note-category #category-title {
+    font-size: 2vw;
+    margin-bottom: -0.1vw;
+}
+
+@media (max-width: 768px) {
+    #note-card {
+        width: 45%;
+        height: auto;
+        padding: 1vw;
+    }
+
+    #note-card #note-thumbnail{
+        height: auto;
+        max-height: 12vw;
+        border-radius: 1vw;
+    }
+
+    #note-card p {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #note-card {
+        width: 90%;
+        height: auto;
+        padding: 2vw;
+    }
+
+    #note-card #note-thumbnail {
+        height: auto;
+        max-height: 30vw;
+    }
+
+    #note-card p {
+        font-size: 2.5vw;
+    }
+}

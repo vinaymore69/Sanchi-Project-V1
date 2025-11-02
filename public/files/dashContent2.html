@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      text-align: center;
+      margin-bottom: 1vw;
+      font-size: 2vw;
+      font-weight: 600;
+    }
+
+    #form-label {
+      display: block;
+      margin-bottom: 0.5vw;
+      font-size: 1.2vw;
+      font-weight: 500;
+    }
+
+    #form-input, #form-textarea {
+      width: 35vw;
+      padding: 0.8vw;
+      font-size: 1vw;
+      border: 1px solid #ccc;
+      border-radius: 0.3vw;
+      margin-bottom: 1vw;
+      box-sizing: border-box;
+    }
+
+    #form-textarea {
+      height: 7vw;
+      resize: none;
+    }
+
+    #form-group {
+      margin-bottom: 2vw;
+    }
+
+    #form-group1, #form-group2, #form-group3 {
+      display: flex;
+      width: 100%;
+      gap: 1.5vw;
+      justify-content: space-between;
+    }
+
+    #progress-bar {
+      margin: 2vw 0;
+      background: #e0e0e0;
+      height: 0.7vw;
+      border-radius: 0.3vw;
+      overflow: hidden;
+    }
+
+    #progress-bar-fill {
+      height: 100%;
+      background: #76c7c0;
+      width: 0;
+      transition: width 0.3s ease-in-out;
+    }
+
+    #update-button {
+      display: block;
+      width: 100%;
+      padding: 1vw;
+      background: #76c7c0;
+      color: #fff;
+      font-size: 1.2vw;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.3vw;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #update-button:hover {
+      background: #68b2a5;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="header">User Details</h1>
+  <div id="progress-bar">
+    <div id="progress-bar-fill"></div>
+  </div>
+  <form id="user-form">
+    <div id="form-group1">
+      <div id="form-group">
+        <label id="form-label" for="first-name">First Name</label>
+        <input id="form-input" type="text" name="firstName" placeholder="Enter your first name">
+      </div>
+      <div id="form-group">
+        <label id="form-label" for="last-name">Last Name</label>
+        <input id="form-input" type="text" name="lastName" placeholder="Enter your last name">
+      </div>
+    </div>
+    <div id="form-group2">
+      <div id="form-group">
+        <label id="form-label" for="email">Email</label>
+        <input id="form-input" type="email" name="email" placeholder="Enter your email">
+      </div>
+      <div id="form-group">
+        <label id="form-label" for="phone">Phone</label>
+        <input id="form-input" type="tel" name="phone" placeholder="Enter your phone number">
+      </div>
+    </div>
+    <div id="form-group3">
+      <div id="form-group">
+        <label id="form-label" for="address">Address</label>
+        <textarea id="form-textarea" name="address" placeholder="Enter your address"></textarea>
+      </div>
+      <div id="form-group">
+        <label id="form-label" for="city">City</label>
+        <input id="form-input" type="text" name="city" placeholder="Enter your city">
+      </div>
+    </div>
+    <button id="update-button" type="submit">Update</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("user-form");
+      const progressBarFill = document.getElementById("progress-bar-fill");
+      const inputs = form.querySelectorAll("input, textarea");
+
+      const fetchUserData = async () => {
+        const data = {
+          firstName: "John",
+          lastName: "Doe",
+          email: "johndoe@example.com",
+          phone: "123-456-7890",
+          address: "123 Main Street",
+          city: "New York"
+        };
+
+        for (const [key, value] of Object.entries(data)) {
+          const input = form.querySelector(`[name="${key}"]`);
+          if (input) input.value = value;
+        }
+        updateProgress();
+      };
+
+      const updateProgress = () => {
+        const filledFields = Array.from(inputs).filter(input => input.value.trim() !== "").length;
+        const totalFields = inputs.length;
+        const progress = (filledFields / totalFields) * 100;
+        progressBarFill.style.width = `${progress}%`;
+      };
+
+      inputs.forEach(input => {
+        input.addEventListener("input", updateProgress);
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        alert("Data updated successfully!");
+      });
+
+      fetchUserData();
+    });
+  </script>
+</body>
+</html>

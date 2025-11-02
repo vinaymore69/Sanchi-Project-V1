@@ -1,0 +1,89 @@
+
+:root{
+    --bpPrimary-600: #65fb65;
+}
+#nav-part3{
+    display: none;
+}
+nav{
+    padding: 2vw 2vw;
+     width: 100%;
+     display: flex;
+     justify-content:  space-between;
+     align-items: center;
+     height: 16vh;
+     z-index: 9999;
+ }
+
+ #nav-part2{
+     display: flex;
+     align-items: center;
+     gap: 1vw;
+ }
+ #nav-part2 h4{
+     padding:  0.8vw 1.5vw;
+     border: 1px solid #1d1d1d6e;
+     border-radius: 3vw;
+     font-weight: 400;
+     z-index: 999;
+     position: relative;
+     color: rgba(0, 0, 0, 0.778);
+     font-size: 1.2vw;
+     transition: all 0.5s ease-in-out;
+     overflow: hidden;
+     cursor: pointer;
+ }
+ #nav-part2 h4 a {
+    color: #1d1d1db3;
+    text-decoration: none;
+    z-index: 99999;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    display: flex; /* Ensures proper alignment of text and icon */
+    align-items: center; /* Vertically centers the icon and text */
+    gap: 8px; /* Adds space between the icon and text */
+}
+
+#nav-part2 h4:hover a {
+    color: aliceblue;
+}
+
+#nav-part2 h4 a span.material-symbols-outlined {
+    font-size: 20px; /* Adjust icon size if needed */
+    color: inherit; /* Ensures the icon color matches the text color */
+    transition: all 0.3s ease-in-out; /* Adds transition for smooth color change */
+}
+
+#nav-part2 h4:hover a span.material-symbols-outlined {
+    color: rgb(133, 249, 135); /* Ensures the icon changes color on hover */
+}
+
+
+ 
+ #nav-part2 h4 select:focus{
+     outline: none;
+ }
+ #nav-part2 h4:after{
+     content: "";
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background-color: rgb(29, 30, 29);
+     left: 0;
+     bottom: -100%;
+     border-radius: 50%;
+     transition: all 0.5s ease-in-out;
+ }
+ #nav-part2 h4:hover::after{
+ bottom: 0;
+     border-radius: 0px;
+ }
+ 
+
+#nav-img{
+    width: 20vw; height: 5vw; 
+}
+#menu-icon{
+    display: none;
+}
+ 

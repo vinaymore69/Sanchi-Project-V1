@@ -1,0 +1,306 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Multilingual Story Display</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      }
+      .story-container {
+        background: #fff;
+        border-radius: 1vw;
+        box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+        margin: 2vw;
+        padding: 2vw;
+        width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .story-container:hover {
+        transform: translateY(-0.5vw);
+        box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.2);
+      }
+      .language-selector {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2vw;
+        width: 100%;
+      }
+      .language-selector button {
+        background: linear-gradient(145deg, #28a745, #218838);
+        border: none;
+        border-radius: 0.5vw;
+        color: #fff;
+        cursor: pointer;
+        padding: 1vw 2vw;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0.5vw 0.75vw rgba(0, 0, 0, 0.1);
+        flex: 1;
+        margin: 0 0.2vw;
+      }
+      .language-selector button:hover {
+        transform: translateY(-0.2vw);
+        box-shadow: 0 0.75vw 1vw rgba(0, 0, 0, 0.2);
+      }
+      .story {
+        display: none;
+        text-align: center;
+      }
+      .story.active {
+        display: block;
+      }
+      .story h2 {
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+        color: #28a745;
+      }
+      .story p {
+        font-size: 1vw;
+        line-height: 1.5;
+        color: #000;
+      }
+      .story img {
+        width: 100%;
+        height: 30vh;
+        border-radius: 0.5vw;
+        margin-bottom: 1vw;
+      }
+      @media (max-width: 768px) {
+        .story-container {
+          width: 80vw;
+          padding: 4vw;
+        }
+        .language-selector button {
+          padding: 2vw 4vw;
+          font-size: 3vw;
+        }
+        .story h2 {
+          font-size: 4vw;
+        }
+        .story p {
+          font-size: 3vw;
+        }
+      }
+      @media (max-width: 480px) {
+        .story-container {
+          width: 90vw;
+          padding: 5vw;
+        }
+        .language-selector button {
+          padding: 3vw 5vw;
+          font-size: 4vw;
+        }
+        .story h2 {
+          font-size: 5vw;
+        }
+        .story p {
+          font-size: 4vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="story-container">
+      <div class="language-selector">
+        <button onclick="showStory('story1', 'english')">English</button>
+        <button onclick="showStory('story1', 'hindi')">Hindi</button>
+        <button onclick="showStory('story1', 'marathi')">Marathi</button>
+      </div>
+      <div class="story active" id="story1-english">
+        <img
+          alt="A kind-hearted boy in a small village dreaming of becoming a hero"
+          src="https://placehold.co/300x200"
+        />
+        <h2>Story 1 in English</h2>
+        <p>
+          On a beautiful sunny day, a fox was strolling along, deep in thought
+          about his foxy affairs. He decided it would be best to enjoy his lunch
+          under the shade of a tree. After all, he was quite hungry and thirsty.
+        </p>
+        <p>
+          However, to his dismay, he realized he had forgotten his
+          <b>delicious lunch</b> at home!
+        </p>
+        <p>“How could I have been so forgetful?” he exclaimed.</p>
+        <p>
+          Suddenly, his eyes fell upon a sight that made him forget his
+          troubles. Hanging from a branch above, swaying gently in the breeze,
+          were the most magnificent grapes he had ever seen! They were plump,
+          juicy, and glistening in the sunlight. The fox’s mouth watered at the
+          sight.
+        </p>
+        <p>
+          <b>“I must have those grapes!”</b> he declared.
+          <b> “Just one bite of that sweet fruit…”</b>
+        </p>
+        <p>
+          But the grapes hung high on the branch, well beyond his reach. He
+          leaped and stretched, but to no avail. He backed up, ran, and jumped
+          again, but still, the grapes remained tantalizingly out of reach.
+        </p>
+        <p>
+          Exhausted and frustrated after numerous failed attempts, he collapsed
+          beneath the tree.
+        </p>
+        <p>
+          <b>“What a foolish fox I am!”</b> he grumbled.
+          <b
+            >“Jumping and straining for these sour grapes on this hot day! Who
+            even wants these sour grapes anyway?”</b
+          >
+        </p>
+        <p>
+          With a flick of his tail, the fox turned and headed home, defeated.
+        </p>
+        <p>
+          <b
+            >And so, dear children, remember that sometimes, when we can’t have
+            something, we may try to convince ourselves that we didn’t want it
+            in the first place. Just like our friend the fox!</b
+          >
+        </p>
+      </div>
+      <div class="story" id="story1-hindi">
+        <img
+          alt="एक छोटे से गाँव में एक दयालु लड़का जो एक नायक बनने का सपना देखता था"
+          src="https://placehold.co/300x200"
+        />
+        <h2>हिंदी में कहानी 1</h2>
+        <p>
+          
+            एक सुंदर धूपी दिन पर, एक लोमड़ी अपने लोमड़ी कामों के बारे में
+            गहरे विचार में था। उसने यह निर्णय लिया कि यह उसके लंच का आनंद
+            लेना सबसे अच्छा होगा। उसको बहुत भूख और प्यास थी।
+
+
+        </p>
+        <p>
+          लेकिन, उसकी निराशा के लिए, उसने यह अनुभव किया कि उसने अपना
+          <b>स्वादिष्ट लंच</b> घर पर भूल गया था!
+        </p>
+        <p>“मैंने इतना भूल कैसे कर सकता था?” उसने चिल्लाया।</p>
+        <p>
+          अचानक, उसकी आंखें उस दृश्य पर गिरीं जिसने उसे उसकी चिंताओं को
+          भूलने पर मजबूर किया। ऊपर से एक डाल से लटकते हुए, हल्के हवामें
+          हिलते हुए, वह सबसे शानदार अंगूर थे जिन्हें उसने कभी नहीं देखा
+          था! वे मोटे, रसीले और सूर्य किरणों में चमक रहे थे। लोमड़ी के
+          मुँह में पानी आ गया।
+        </p>
+        <p>
+          <b>“मुझे उन अंगूरों को चाहिए!”</b> उसने घोषणा की।
+          <b> “उस मीठे फल का एक टुकड़ा…”</b>
+        </p>
+        <p>
+          लेकिन अंगूर डाल के ऊपर ऊँचे थे, उसके पहुँच से बहुत दूर। उसने
+          कूदा और फैलाया, लेकिन कोई फायदा नहीं हुआ। वह पीछे हटा, दौड़ा,
+          और फिर से कूदा, लेकिन फिर भी, अंगूर उसकी पहुँच से बाहर रहे।
+        </p>
+        <p>
+          कई विफल प्रयासों के बाद थका हुआ और निराश होकर, वह पेड़ के नीचे
+          गिर गया।
+        </p>
+        <p>
+          <b>“मैं कितना मूर्ख लोमड़ी हूँ!”</b> उसने गुस्से से कहा।
+          <b
+            >“इस गर्म दिन पर इन खट्टे अंगूरों के लिए कूदना और तनाव लेना!
+            किसे भी इन खट्टे अंगूरों की जरूरत है?”</b
+          >
+        </p>
+        <p>
+          अपनी पूंछ की एक झटके के साथ, लोमड़ी घर की ओर मुड़ा और हार गया।
+        </p>
+        <p>
+          <b
+            >और इस प्रकार, प्यारे बच्चों, याद रखें कि कभी-कभी, जब हम कुछ
+            नहीं पा सकते हैं, हम अपने आप को यह समझाने की कोशिश कर सकते
+            हैं कि हमें पहले से ही उसकी इच्छा नहीं थी। हमारे दोस्त लोमड़ी
+            की तरह!</b
+          >
+        </p>
+
+
+      </div>
+      <div class="story" id="story1-marathi">
+        <img
+          alt="एका छोट्या गावात एक दयाळू मुलगा जो नायक होण्याचं स्वप्न पाहतो"
+          src="https://placehold.co/300x200"
+        />
+        <h2>मराठीत कथा 1</h2>
+        <p>एके गावात, एका छोट्या मुलाने नायक होण्याचं स्वप्न पाहिलं.</p>
+      </div>
+    </div>
+    <div class="story-container">
+      <div class="language-selector">
+        <button onclick="showStory('story2', 'english')">English</button>
+        <button onclick="showStory('story2', 'hindi')">Hindi</button>
+        <button onclick="showStory('story2', 'marathi')">Marathi</button>
+      </div>
+      <div class="story active" id="story2-english">
+        <img
+          alt="A brave princess on a quest to save her kingdom from a fearsome dragon"
+          src="https://placehold.co/300x200"
+        />
+        <h2>Story 2 in English</h2>
+        <p>
+          Long ago, a brave princess set out on a quest to save her kingdom from
+          a fearsome dragon.
+        </p>
+      </div>
+      <div class="story" id="story2-hindi">
+        <img
+          alt="एक बहादुर राजकुमारी जो अपने राज्य को एक डरावने ड्रैगन से बचाने के लिए यात्रा पर निकली"
+          src="https://placehold.co/300x200"
+        />
+        <h2>हिंदी में कहानी 2</h2>
+        <p>
+          बहुत समय पहले, एक बहादुर राजकुमारी ने अपने राज्य को एक डरावने ड्रैगन
+          से बचाने के लिए यात्रा शुरू की।
+        </p>
+      </div>
+      <div class="story" id="story2-marathi">
+        <img
+          alt="एक धाडसी राजकन्या जी आपल्या राज्याला एका भयानक ड्रॅगनपासून वाचवण्यासाठी निघाली होती"
+          src="https://placehold.co/300x200"
+        />
+        <h2>मराठीत कथा 2</h2>
+        <p>
+          पूर्वी एक धाडसी राजकन्या आपल्या राज्याला एका भयानक ड्रॅगनपासून
+          वाचवण्यासाठी निघाली होती.
+        </p>
+      </div>
+    </div>
+    <script>
+      function showStory(storyId, language) {
+        const stories = document.querySelectorAll(
+          `#${storyId}-english, #${storyId}-hindi, #${storyId}-marathi`
+        );
+        stories.forEach((story) => story.classList.remove("active"));
+
+        const selectedStory = document.getElementById(`${storyId}-${language}`);
+        selectedStory.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
