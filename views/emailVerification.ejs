@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .verification-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a54e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="verification-container">
+        <h2>Verify Your Email</h2>
+        <p>A verification email has been sent to your email address <%= email %>. Please verify your account.</p>
+        <button id="resend-email">Resend Email</button>
+        <button onclick="window.open(`https:\/\/mail.google.com`, '_blank')">Go to Gmail</button>
+        <button class="cancel" onclick="cancelSignup()">Cancel</button>
+    </div>
+    <script>
+        document.getElementById("resend-email").addEventListener("click", async () => {
+            try {
+                const response = await fetch("/auth/resend-verification");
+                if (response.status === 200) {
+                    alert("Verification email resent.");
+                } else if (!response.ok) {
+                    const errorData = await response.json();
+                    alert(errorData.error); // Display error message
+                } 
+            } catch (error) {
+                console.error(error);
+            }
+        });
+
+        function cancelSignup() {
+            alert("Signup canceled.");
+            window.location.href = "/index.html";
+        }
+    </script>
+</body>
+</html>

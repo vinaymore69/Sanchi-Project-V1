@@ -1,0 +1,78 @@
+#upload-notes-header {
+  text-align: center;
+  margin-bottom: 2vw;
+  font-size: 2vw;
+  font-weight: 600;
+  color: #333;
+}
+
+#upload-notes-form-group {
+  margin-bottom: 2vw;
+}
+
+#upload-notes-label {
+  display: block;
+  margin-bottom: 0.5vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #555;
+}
+
+#upload-notes-input,
+#upload-notes-textarea,
+#upload-notes-file {
+  width: 100%;
+  padding: 0.8vw;
+  font-size: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 0.3vw;
+  box-sizing: border-box;
+}
+
+#upload-notes-textarea {
+  height: 7vw;
+  resize: none;
+}
+
+#upload-notes-button {
+  display: block;
+  width: 100%;
+  padding: 1vw;
+  background: #76c7c0;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+#upload-notes-button:hover {
+  background: #68b2a5;
+}
+
+
+#upload-notes-select {
+    width: 100%;
+    padding: 0.8vw;
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 0.3vw;
+    box-sizing: border-box;
+}
+
+
+/*   
+  #audio-desc {
+    width: 100%;
+    padding: 0.8vw;
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 0.3vw;
+    margin-bottom: 1vw;
+    box-sizing: border-box;
+    height: 7vw;
+    resize: none;
+  }
+   */

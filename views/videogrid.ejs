@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="shortcut icon" href="/images/icon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css_files/videogrid.css">
+    <link rel="stylesheet" href="/css_files/menu.css">
+    <link rel="stylesheet" href="/css_files/language.css">
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="languages-section">
+            <div id="closing" onclick="toggleLanguageMenu()">
+                <span style='font-size:100px;'>&#10008;</span>
+            </div>
+            <div id="languages">
+                <h1>Choose Language</h1>
+                <div id="language">
+                    <h2 value="english" onclick="updateLanguage('english')">English</h2>
+                    <h2 value="hindi" onclick="updateLanguage('hindi')">हिंदी</h2>
+                    <h2 value="marathi" onclick="updateLanguage('marathi')">मराठी</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="page1">
+
+            <nav>
+                <a href="index.html"
+                  ><img src="images/logo.svg" alt="" id="nav-img"
+                /></a>
+                <div id="nav-part2">
+                  <h4><a href="index.html" id="content2">Home</a></h4>
+                  <h4><a href="about.html" id="content3">About</a></h4>
+                  <h4>
+                    <a href="#" id="language-toggle"
+                    >
+                      <span style="font-size: 20px" id="content4">Language</span>
+                    </a>
+                  </h4>
+                  <h4><a href="#" id="content5">Contact</a></h4>
+                  <h4><a href="video.html" id="content6">Resources</a></h4>
+                </div>
+                <div id="menu-icon">
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 70px"
+                    id="menu-icon-span"
+                    >menu</span
+                  >
+                </div>
+              </nav>
+
+
+
+            <section id="video-category">
+                <h4 id="category-title">
+                    <%= videos[1].category %>
+                </h4>
+                <div id="video-grid">
+                    <% videos.forEach(video=> { %>
+                        <article id="video-card"
+                            onclick="window.open('/user/videoplayer?videoTitle=<%=video.video_title%>')">
+                            <img src="<%= video.video_thumbnail %>" id="video-thumbnail" alt="Image not Found">
+                            <h4>
+                                <%= video.video_title %>
+                            </h4>
+                            <p>
+                                By <%= video.name_of_user %> <br>
+                                    <%= video.video_description %>
+                            </p>
+                        </article>
+                        <% }) %>
+                </div>
+            </section>
+
+        </div>
+
+        <div id="page5">
+
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-div">
+            <h4>Sanchi <br> Education <br> for Girls</h4>
+        </div>
+        <h1>SanChi</h1>
+        <div id="footer-bottom">
+            <h4>Copyright: @SanChi Team</h4>
+            <h4>Resources</h4>
+            <h4>Vidyalankar Polytechnic</h4>
+            <h4>RedBox Agency</h4>
+        </div>
+    </div>
+    <script src="/video.js"></script>
+</body>
+
+</html>

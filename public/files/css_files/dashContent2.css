@@ -1,0 +1,81 @@
+#header {
+  text-align: center;
+  margin-bottom: 1vw;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+#form-label {
+  display: block;
+  margin-bottom: 0.5vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+#fname,
+#lname,
+#emailcon,
+#age,
+#cityname,
+#form-textarea {
+  width: 35vw;
+  padding: 0.8vw;
+  font-size: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 0.3vw;
+  margin-bottom: 1vw;
+  box-sizing: border-box;
+}
+
+#form-textarea {
+  height: 7vw;
+  resize: none;
+}
+
+#form-group {
+  margin-bottom: 2vw;
+}
+
+#form-group1,
+#form-group2,
+#form-group3 {
+  display: flex;
+  width: 100%;
+  gap: 1.5vw;
+  justify-content: space-between;
+}
+
+#progress-bar {
+  margin: 2vw 0;
+  background: #e0e0e0;
+  height: 0.7vw;
+  border-radius: 0.3vw;
+  overflow: hidden;
+}
+
+#progress-bar-fill {
+  height: 100%;
+  background: #76c7c0;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+#update-button {
+  display: block;
+  width: 100%;
+  padding: 1vw;
+  background: #76c7c0;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+#update-button:hover {
+  background: #68b2a5;
+}
+
+

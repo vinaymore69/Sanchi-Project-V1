@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container form {
+            width: 100%;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            flex: 1;
+            font-size: 18px;
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .file-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .file-container input {
+            flex: 1;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: white;
+            color: #28a745;
+            border: 1px solid #28a745;
+        }
+
+        .add-attachment-btn {
+            margin-left: auto;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .add-attachment-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="/contact" id="contact-form" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Contact Us</legend>
+
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="name">First Name:</label>
+                    <input id="name" name="first_name" placeholder="Enter your First Name" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input id="lastname" name="last_name" placeholder="Enter your Last Name">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="emailfield">E-mail:</label>
+                    <input type="email" id="emailfield" name="email" placeholder="Enter your E-mail">
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input id="title" name="title" placeholder="Enter a short title" required>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="messagefield">Message:</label>
+                    <textarea id="messagefield" name="message" placeholder="Enter your message"></textarea>
+                </div>
+
+                <!-- Attachments -->
+                <div id="attachments-container">
+                    <div class="file-container">
+                        <input type="file" id="attachment-1" name="attachments[]" accept="image/*">
+                        <input type="text" id="filename-1" name="file_names[]"
+                            placeholder="Enter file name (please don't add extension names like .jpg, .png)">
+                    </div>
+                </div>
+
+                <!-- Add Attachment Button -->
+                <button type="button" class="add-attachment-btn" id="add-attachment">
+                    + Add Attachment
+                </button>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        const attachmentsContainer = document.getElementById('attachments-container');
+        const addAttachmentBtn = document.getElementById('add-attachment');
+
+        let attachmentCount = 1;
+
+        addAttachmentBtn.addEventListener('click', () => {
+            attachmentCount++;
+
+            // Create new file and file name input fields
+            const fileContainer = document.createElement('div');
+            fileContainer.classList.add('file-container');
+
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.name = 'attachments[]';
+            fileInput.id = `attachment-${attachmentCount}`;
+            fileInput.accept = 'image/*';
+
+            const fileNameInput = document.createElement('input');
+            fileNameInput.type = 'text';
+            fileNameInput.name = 'file_names[]';
+            fileNameInput.id = `filename-${attachmentCount}`;
+            fileNameInput.placeholder = 'Enter file name';
+
+            // Append inputs to the new container
+            fileContainer.appendChild(fileInput);
+            fileContainer.appendChild(fileNameInput);
+
+            // Append the new container to the attachments section
+            attachmentsContainer.appendChild(fileContainer);
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", (e) => {
+            alert("Form data submitted successfully!");
+            form.reset();
+        });
+
+    </script>
+</body>
+
+</html>

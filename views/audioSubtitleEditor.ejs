@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Audio Subtitle Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .audio-section, .subtitle-container {
+      margin-bottom: 30px;
+    }
+    .subtitle-container {
+      display: flex;
+      gap: 20px;
+    }
+    .subtitle-preview, .subtitle-editor {
+      flex: 1;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px;
+      margin-bottom: 5px;
+      background: #f1f1f1;
+      border-radius: 5px;
+    }
+    .subtitle-input-group {
+      margin-bottom: 10px;
+    }
+    input.subtitle-input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Audio Subtitle Editor</h1>
+
+    <h2>Editing</h2>
+    <h2 id="audio_file_name"><%= audioFileName %></h2>
+    <form id="audio-subtitle-form" method="post">
+      <!-- Audio Player -->
+      <div class="audio-section">
+        <h2>Audio Preview</h2>
+        <audio id="audio-player" controls>
+          <source src="<%= audioFilePath %>" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Subtitles -->
+      <div class="subtitle-container">
+        <div class="subtitle-preview">
+          <h2>Subtitles Preview</h2>
+          <ul id="subtitle-list">
+            <!-- Subtitle preview items will be dynamically added here -->
+          </ul>
+        </div>
+
+        <div class="subtitle-editor">
+          <h2>Edit Subtitles</h2>
+          <div id="subtitle-inputs">
+            <!-- Subtitle input fields dynamically added here -->
+          </div>
+          <button type="button" id="add-subtitle">Add Subtitle</button>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" >Save Subtitles</button>
+    </form>
+  </div>
+
+  <script>
+    const audioPlayer = document.getElementById("audio-player");
+    const subtitleInputs = document.getElementById("subtitle-inputs");
+    const subtitleList = document.getElementById("subtitle-list");
+    const addSubtitleButton = document.getElementById("add-subtitle");
+
+    let subtitleCount = 0;
+
+    // Function to create a new subtitle input
+    function createSubtitleInput(start, end) {
+      const inputContainer = document.createElement("div");
+      inputContainer.classList.add("subtitle-input-group");
+
+      inputContainer.innerHTML = `
+        <label for="subtitle-${subtitleCount}">Subtitle ${subtitleCount + 1} (${start}-${end}s):</label>
+        <input type="text" id="subtitle-${subtitleCount}" class="subtitle-input" placeholder="Enter subtitle" data-start="${start}" data-end="${end}" />
+      `;
+
+      // Add event listener to play specific segment when clicked
+      const input = inputContainer.querySelector(".subtitle-input");
+      input.addEventListener("click", () => {
+        audioPlayer.currentTime = start;
+        audioPlayer.play();
+
+        // Stop playback after the segment ends
+        const playbackInterval = setInterval(() => {
+          if (audioPlayer.currentTime >= end) {
+            audioPlayer.pause();
+            clearInterval(playbackInterval);
+          }
+        }, 100);
+      });
+
+      subtitleInputs.appendChild(inputContainer);
+    }
+
+    // Add subtitle button event listener
+    addSubtitleButton.addEventListener("click", () => {
+      const start = subtitleCount * 10;
+      const end = start + 10;
+      createSubtitleInput(start, end);
+
+      // Add subtitle preview item
+      const listItem = document.createElement("li");
+      listItem.textContent = `Subtitle ${subtitleCount + 1} (${start}-${end}s)`;
+      listItem.id = `subtitle-preview-${subtitleCount}`;
+      subtitleList.appendChild(listItem);
+
+      subtitleCount++;
+    });
+
+    // Submit handler
+    document.getElementById("audio-subtitle-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const subtitles = [];
+      document.querySelectorAll(".subtitle-input").forEach((input) => {
+        const startTime = input.dataset.start;
+        const end = input.dataset.end;
+        const text = input.value + ' ';
+        subtitles.push({ startTime, end, text });
+      });
+
+      const audioFileName = document.getElementById('audio_file_name').innerText;
+
+      try {
+        const response = await fetch('/user/save-subtitles', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ 
+            bookTitle: audioFileName,
+            subtitles:subtitles 
+          }),
+        });
+
+        if (response.ok) {
+          alert("Subtitles saved successfully!");
+        } else {
+          alert("Failed to save subtitles.");
+        }
+      } catch (error) {
+        console.error("Error saving subtitles:", error);
+        alert("An error occurred while saving subtitles.");
+      }
+    });
+  </script>
+
+</body>
+</html>

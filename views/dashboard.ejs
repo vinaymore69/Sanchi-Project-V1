@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css_files/dashboard.css">
+  <link rel="stylesheet" href="/css_files/dashContent1.css">
+  <link rel="stylesheet" href="/css_files/dashContent2.css">
+  <link rel="stylesheet" href="/css_files/dashContent3.css">
+  <link rel="stylesheet" href="/css_files/dashContent4.css">
+  <link rel="stylesheet" href="/css_files/dashContent5.css">
+  <link rel="stylesheet" href="/css_files/menu.css">
+  <link rel="stylesheet" href="/css_files/language.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+</head>
+
+<body>
+  <div id="main">
+
+
+    <div id="languages-section">
+      <div id="closing" onclick="toggleLanguageMenu()">
+        <span style='font-size:100px;'>&#10008;</span>
+      </div>
+      <div id="languages">
+        <h1>Choose Language</h1>
+        <div id="language">
+          <h2 value="english" onclick="updateLanguage('english')">English</h2>
+          <h2 value="hindi" onclick="updateLanguage('hindi')">हिंदी</h2>
+          <h2 value="marathi" onclick="updateLanguage('marathi')">मराठी</h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="page1">
+
+      <nav>
+        <img src="/images/Logovp.png" alt="" style="width: 15vw; height: 15vw;">
+        <div id="nav-part2">
+          <h4><a href="/index.html" id="">Home</a></h4>
+          <h4><a href="#" id="">About</a></h4>
+          <h4>
+            <a href="#" onclick="toggleLanguageMenu()" id="">Language
+              <span style='font-size:20px;'>&#8595;</span>
+            </a>
+          </h4>
+          <h4><a href="#" id="">Contact</a></h4>
+          <h4><a href="/video.html" id="">Resources</a></h4>
+        </div>
+      </nav>
+
+
+      <div class="dashboard-panel">
+        <div id="side-bar">
+          <div id="profile-data">
+            <img id="profile-image" src=<%=img_src %> alt="Image not found">
+            <label id="name">
+              <%= username %>
+            </label>
+            <label id="email">
+              <%= email %>
+            </label>
+          </div>
+          <div id="dashboard-options">
+            <button id="main-dashboard" class="dashboard-options-element" value="dashboard"
+              onclick="updateDashboradContent(id, value)">
+              <span><img src="/images/audio_book.svg" width="12em" height="12em"></span>
+              Audio Book
+            </button>
+            <button id="account-profile" class="dashboard-options-element" value="profile"
+              onclick="updateDashboradContent(id, value)">
+              <span class="material-symbols-outlined">person</span>
+              Edit your Profile
+            </button>
+            <button id="notes" class="dashboard-options-element" value="notes"
+              onclick="updateDashboradContent(id, value)">
+              <span class="material-symbols-outlined">export_notes</span>
+              Scratch Notes
+            </button>
+            <button id="videos" class="dashboard-options-element" value="videos"
+              onclick="updateDashboradContent(id, value)">
+              <span class="material-symbols-outlined">video_library</span>
+              Video
+            </button>
+            <button id="upload-notes" class="dashboard-options-element" value="uploadNotes"
+              onclick="updateDashboradContent(id, value)">
+              <span class="material-symbols-outlined">upload</span>
+              Upload Notes
+            </button>
+          </div>
+          <div id="additional-options">
+            <button id="logout" onclick="window.open('/auth/logout')">Log Out</button>
+          </div>
+        </div>
+
+        <!--Audio Book Upload-->
+        <div id="dashboard-content">
+          <div id="dashboard-content-button1">
+            <h1 id="audio-panel-header">Publish your Audio Book</h1>
+            <form id="audio-panel-form" name="audio_book_upload_form" action="/user/audio_book_upload" method="post"
+              autocomplete="off" enctype="multipart/form-data">
+              <div id="audio-panel-form-group">
+                <label id="audio-panel-label">Audio Book Title</label>
+                <input id="audio-panel-input" type="text" name="audioTitle" placeholder="Enter the Audiobook title"
+                  required>
+              </div>
+              <div id="audio-panel-form-group">
+                <label id="audio-panel-label" for="audio-file">Upload Audio</label>
+                <input id="audio-panel-file" type="file" name="audio" accept="audio/*" required>
+              </div>
+              <div id="audio-panel-form-group">
+                <label id="audio-panel-label" for="audio-desc">Description</label>
+                <textarea id="audio-desc" name="audioDesc" placeholder="Enter your Audiobook Description"></textarea>
+              </div>
+              <div id="audio-panel-form-group">
+                <label id="audio-panel-label" for="audio-thumbnail">Upload Thumbnail</label>
+                <input id="audio-panel-file" type="file" name="thumbnail" accept="image/*" required>
+              </div>
+              <button id="audio-panel-button" type="submit">Upload Audio</button>
+            </form>
+            <div id="audio-gallery">
+            </div>
+          </div>
+
+          <!--For Changing Profile -->
+          <div id="dashboard-content-button2">
+            <h1 id="header">User Details</h1>
+            <div id="progress-bar">
+              <div id="progress-bar-fill"></div>
+            </div>
+            <form id="user-form" autocomplete="off">
+              <div id="form-group1">
+                <div id="form-group">
+                  <label id="form-label" for="first-name">First Name</label>
+                  <input id="fname" type="text" name="firstName" placeholder="Enter your first name"
+                    value="<%= first_name || '' %>">
+                </div>
+                <div id="form-group">
+                  <label id="form-label" for="last-name">Last Name</label>
+                  <input id="lname" type="text" name="lastName" placeholder="Enter your last name"
+                    value="<%= last_name || '' %>">
+                </div>
+              </div>
+              <div id="form-group2">
+                <div id="form-group">
+                  <label id="form-label" for="email">Email</label>
+                  <input id="emailcon" type="email" name="email" placeholder="Enter your email (be careful )"
+                    value="<%= email || '' %>">
+                </div>
+                <div id="form-group">
+                  <label id="form-label" for="age">Age</label>
+                  <input id="age" type="age" name="age" placeholder="Enter your age" value="<%= age || '' %>">
+                </div>
+              </div>
+              <div id="form-group3">
+                <div id="form-group">
+                  <label id="form-label" for="address">Address</label>
+                  <textarea id="form-textarea" name="address"
+                    placeholder="Enter your address"><%= address || '' %></textarea>
+                </div>
+                <div id="form-group">
+                  <label id="form-label" for="city">City</label>
+                  <input id="cityname" type="text" name="city" placeholder="Enter your city">
+                </div>
+              </div>
+              <button id="update-button" type="submit">Update</button>
+            </form>
+          </div>
+
+          <!--Notes-->
+          <div id="dashboard-content-button3">
+            <div id="notesApp" class="App">
+              <div class="sidebar">
+                <button id="addButton" class="addButton">
+                  <span>+</span>
+                </button>
+                <div id="colorPicker" class="colorPicker" style="display: none">
+                  <div class="colorBlock" style="background-color: #fec9a7"></div>
+                  <div class="colorBlock" style="background-color: #a7fec9"></div>
+                  <div class="colorBlock" style="background-color: #c9a7fe"></div>
+                  <div class="colorBlock" style="background-color: #a7c9fe"></div>
+                </div>
+              </div>
+              <div id="noteArea" class="noteArea"></div>
+
+              <div id="noteEditor" class="noteEditor" style="display: none;">
+                <textarea id="noteTextarea" placeholder="Enter your data..."></textarea>
+                <button id="updateButton">Update</button>
+                <button id="deleteButton" class="destructive">Delete</button>
+                <span id="closeEditor" class="closeIcon">&#x2718;</span>
+              </div>
+            </div>
+          </div>
+
+          <!--Video Upload-->
+          <div id="dashboard-content-button4">
+            <h1 id="video-panel-header">Upload Your Video</h1>
+            <form id="video-panel-form" autocomplete="off" enctype="multipart/form-data">
+              <div id="video-panel-form-group">
+                <label id="video-panel-label" for="video-title">Video Title</label>
+                <input id="video-panel-input" type="text" name="videoTitle" placeholder="Enter the video title"
+                  required>
+              </div>
+              <div id="video-panel-form-group">
+                <label id="video-panel-label" for="video-description">Video Description</label>
+                <textarea id="video-panel-textarea" name="videoDescription" placeholder="Enter the video description"
+                  value=""></textarea>
+              </div>
+              <div id="video-panel-form-group">
+                <label id="video-panel-label" for="video-file">Upload Video</label>
+                <input id="video-panel-file" type="file" name="videoFile" required accept="video/*">
+              </div>
+              <div id="video-panel-form-group">
+                <label id="video-panel-label" for="video-panel-select">Select Category</label>
+                <select id="video-panel-select" required name="videoCategory">
+                  <option value="Physics">Physics</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Chemistry">Chemistry</option>
+                </select>
+              </div>
+              <div id="video-panel-form-group">
+                <label id="video-panel-label" for="video-thumbnail">Upload Thumbnail</label>
+                <input id="video-panel-file" type="file" name="videoThumbnail" reqruired accept="image/*">
+              </div>
+              <button id="video-panel-button" type="submit">Upload Video</button>
+            </form>
+          </div>
+
+          <!--Upload Notes-->
+          <div id="dashboard-content-button5">
+            <h1 id="header">Upload Notes</h1>
+            <form id="upload-notes-form" name="upload_notes_form" autocomplete="off" enctype="multipart/form-data">
+              <div id="upload-notes-form-group">
+                <label id="upload-notes-label" for="upload-notes-class-label">Name of File</label>
+                <input type="text" id="upload-notes-input" name="notesFileName" placeholder="Give a Name to your File to Display" required>
+              </div>
+              
+              <div id="upload-notes-form-group">
+                <label id="upload-notes-label" for="upload-notes-class-label">Select Class</label>
+                <select id="upload-notes-select" name="classSelect" required>
+                  <option value="Class1">Class 1</option>
+                  <option value="Class2">Class 2</option>
+                  <option value="Class3">Class 3</option>
+                  <option value="Class4">Class 4</option>
+                  <option value="Class5">Class 5</option>
+                </select>
+              </div>
+
+              <div id="upload-notes-form-group">
+                <label id="upload-notes-label" for="upload-notes-class-label">Select Subject</label>
+                <select id="upload-notes-select" name="categorySelect" required>
+                  <option value="Science">Science</option>
+                  <option value="Maths">Maths</option>
+                  <option value="Geography">Geography</option>
+                  <option value="History">History</option>
+                  <option value="Hindi">Hindi</option>
+                  <option value="English">English</option>
+                </select>
+              </div>
+
+              <div id="upload-notes-form-group">
+                <label id="upload-notes-label" for="upload-notes-file">Upload File</label>
+                <input id="upload-notes-file" type="file" name="notesFile" accept="application/pdf" required>
+              </div>
+
+              <button id="audio-panel-button" type="submit">Upload Notes</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="page5">
+
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div id="footer-div">
+      <h4>Sanchi <br> Education <br> for Girls</h4>
+    </div>
+    <h1>SanChi</h1>
+    <div id="footer-bottom">
+      <h4>Copyright: @SanChi Team</h4>
+      <h4>Resources</h4>
+      <h4>Vidyalankar Polytechnic</h4>
+      <h4>RedBox Agency</h4>
+    </div>
+  </div>
+
+  <script defer src="/dashboard.js"></script>
+  <script defer src="/dashContent1.js"></script>
+  <script defer src="/dashContent3.js"></script>
+  <script defer src="/dashContent4.js"></script>
+  <script defer src="/dashContent5.js"></script>
+</body>
+
+</html>
